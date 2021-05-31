@@ -611,47 +611,142 @@
 
         <div id="media" class="page">
             <h2>04 - MEDIA</h2>
-            <span id="mediaImg">
-                <img src="./img/media0.png" alt="" class="mediaListImg">
-                <img src="./img/media1.png" alt="" class="mediaListImg">
-                <img src="./img/media2.png" alt="" class="mediaListImg">
-                <img src="./img/media3.png" alt="" class="mediaListImg">
-                <img src="./img/media4.png" alt="" class="mediaListImg">
-                <img src="./img/media5.png" alt="" class="mediaListImg">
-                <img src="./img/media6.png" alt="" class="mediaListImg">
-                <img src="./img/media7.png" alt="" class="mediaListImg">
-                <img src="./img/media8.png" alt="" class="mediaListImg">
-                <img src="./img/media9.png" alt="" class="mediaListImg">
-                <img src="./img/media10.png" alt="" class="mediaListImg">
-                <img src="./img/media11.png" alt="" class="mediaListImg">
-                <img src="./img/media12.png" alt="" class="mediaListImg">
-                <img src="./img/media13.png" alt="" class="mediaListImg">
-                <img src="./img/media14.png" alt="" class="mediaListImg">
-                <img src="./img/media15.png" alt="" class="mediaListImg">
-                <img src="./img/media16.png" alt="" class="mediaListImg">
-                <img src="./img/media17.png" alt="" class="mediaListImg">
-            </span>
-            <span id="mediaList">
-                <ul>
-                    <li class="mediaListLi"></li>
-                    <li class="mediaListLi"></li>
-                    <li class="mediaListLi"></li>
-                    <li class="mediaListLi"></li>
-                    <li class="mediaListLi"></li>       
-                    <li class="mediaListLi"></li>
-                    <li class="mediaListLi"></li>
-                    <li class="mediaListLi"></li>
-                    <li class="mediaListLi"></li>
-                    <li class="mediaListLi"></li>   
-                    <li class="mediaListLi"></li>
-                    <li class="mediaListLi"></li>
-                    <li class="mediaListLi"></li>
-                    <li class="mediaListLi"></li>
-                    <li class="mediaListLi"></li>   
-                    <li class="mediaListLi"></li>
-                    <li class="mediaListLi"></li>
-                    <li class="mediaListLi"></li>           
-                </ul>
+            <br>
+            <div id="mediaList">
+                <span id="mediaImg">
+                    <img src="./img/media0.png" alt="" class="mediaImgList">
+                    <img src="./img/media1.png" alt="" class="mediaImgList">
+                    <img src="./img/media2.png" alt="" class="mediaImgList">
+                    <img src="./img/media3.png" alt="" class="mediaImgList">
+                    <img src="./img/media4.png" alt="" class="mediaImgList">
+                    <img src="./img/media5.png" alt="" class="mediaImgList">
+                    <img src="./img/media6.png" alt="" class="mediaImgList">
+                    <img src="./img/media7.png" alt="" class="mediaImgList">
+                    <img src="./img/media8.png" alt="" class="mediaImgList">
+                    <img src="./img/media9.png" alt="" class="mediaImgList">
+                    <img src="./img/media10.png" alt="" class="mediaImgList">
+                    <img src="./img/media11.png" alt="" class="mediaImgList">
+                    <img src="./img/media12.png" alt="" class="mediaImgList">
+                    <img src="./img/media13.png" alt="" class="mediaImgList">
+                    <img src="./img/media14.png" alt="" class="mediaImgList">
+                    <img src="./img/media15.png" alt="" class="mediaImgList">
+                    <img src="./img/media16.png" alt="" class="mediaImgList">
+                    <img src="./img/media17.png" alt="" class="mediaImgList">
+                </span>  
+                <br>
+                    <ul id="mediaListLis">
+                        <li class="mediaListLi" onclick="ToMediaListLi(0)"><img src="./img/media0.png"></li>
+                        <li class="mediaListLi" onclick="ToMediaListLi(1)"><img src="./img/media1.png"></li>
+                        <li class="mediaListLi" onclick="ToMediaListLi(2)"><img src="./img/media2.png"></li>
+                        <li class="mediaListLi" onclick="ToMediaListLi(3)"><img src="./img/media3.png"></li>
+                        <li class="mediaListLi" onclick="ToMediaListLi(4)"><img src="./img/media4.png"></li>
+                        <li class="mediaListLi" onclick="ToMediaListLi(5)"><img src="./img/media5.png"></li>  
+                        <li class="mediaListLi" onclick="ToMediaListLi(6)"><img src="./img/media6.png"></li>
+                        <li class="mediaListLi" onclick="ToMediaListLi(7)"><img src="./img/media7.png"></li>
+                        <li class="mediaListLi" onclick="ToMediaListLi(8)"><img src="./img/media8.png"></li>  
+                        <li class="mediaListLi" onclick="ToMediaListLi(9)"><img src="./img/media9.png"></li>
+                        <li class="mediaListLi" onclick="ToMediaListLi(10)"><img src="./img/media10.png"></li>
+                        <li class="mediaListLi" onclick="ToMediaListLi(11)"><img src="./img/media11.png"></li>  
+                        <li class="mediaListLi" onclick="ToMediaListLi(12)"><img src="./img/media12.png"></li>
+                        <li class="mediaListLi" onclick="ToMediaListLi(13)"><img src="./img/media13.png"></li>
+                        <li class="mediaListLi" onclick="ToMediaListLi(14)"><img src="./img/media14.png"></li>  
+                        <li class="mediaListLi" onclick="ToMediaListLi(15)"><img src="./img/media15.png"></li>
+                        <li class="mediaListLi" onclick="ToMediaListLi(16)"><img src="./img/media16.png"></li>
+                        <li class="mediaListLi" onclick="ToMediaListLi(17)"><img src="./img/media17.png"></li>        
+                    </ul>           
+            </div>
+
+            <span id="mediaInformations">
+                <b class="mediaInformation">
+                    <b class="mediaInformationIndex">01</b>
+                    <b class="mediaInformationTitle">第二把赤霄</b>
+                    <b class="mediaInformationTag">#决战#</b>
+                </b>
+                <b class="mediaInformation">
+                    <b class="mediaInformationIndex">02</b>
+                    <b class="mediaInformationTitle">笔记</b>
+                    <b class="mediaInformationTag">#企鹅物流的秘密#</b>
+                </b>
+                <b class="mediaInformation">
+                    <b class="mediaInformationIndex">03</b>
+                    <b class="mediaInformationTitle">安洁莉娜</b>
+                    <b class="mediaInformationTag">#信使#</b>
+                </b>
+                <b class="mediaInformation">
+                    <b class="mediaInformationIndex">04</b>
+                    <b class="mediaInformationTitle">莱茵生命</b>
+                    <b class="mediaInformationTag">#科研#</b>
+                </b>
+                <b class="mediaInformation">
+                    <b class="mediaInformationIndex">05</b>
+                    <b class="mediaInformationTitle">端午</b>
+                    <b class="mediaInformationTag">#炎国水乡#</b>
+                </b>
+                <b class="mediaInformation">
+                    <b class="mediaInformationIndex">06</b>
+                    <b class="mediaInformationTitle">龙门</b>
+                    <b class="mediaInformationTag">#邻街一角#</b>
+                </b>
+                <b class="mediaInformation">
+                    <b class="mediaInformationIndex">07</b>
+                    <b class="mediaInformationTitle">谜团</b>
+                    <b class="mediaInformationTag">#源石#</b>
+                </b>
+                <b class="mediaInformation">
+                    <b class="mediaInformationIndex">08</b>
+                    <b class="mediaInformationTitle">启航</b>
+                    <b class="mediaInformationTag">#任务外出#</b>
+                </b>
+                <b class="mediaInformation">
+                    <b class="mediaInformationIndex">09</b>
+                    <b class="mediaInformationTitle">企鹅物流</b>
+                    <b class="mediaInformationTag">#办公室#</b>
+                </b>
+                <b class="mediaInformation">
+                    <b class="mediaInformationIndex">10</b>
+                    <b class="mediaInformationTitle">启示</b>
+                    <b class="mediaInformationTag">#大厅#</b>
+                </b>
+                <b class="mediaInformation">
+                    <b class="mediaInformationIndex">11</b>
+                    <b class="mediaInformationTitle">死灰复燃</b>
+                    <b class="mediaInformationTag">#不死的黑蛇#</b>
+                </b>
+                <b class="mediaInformation">
+                    <b class="mediaInformationIndex">12</b>
+                    <b class="mediaInformationTitle">苏醒</b>
+                    <b class="mediaInformationTag">#石馆之间#</b>
+                </b>
+                <b class="mediaInformation">
+                    <b class="mediaInformationIndex">13</b>
+                    <b class="mediaInformationTitle">乌萨斯学生自治团</b>
+                    <b class="mediaInformationTag">#回忆中的教室#</b>
+                </b>
+                <b class="mediaInformation">
+                    <b class="mediaInformationIndex">14</b>
+                    <b class="mediaInformationTitle">瑕光</b>
+                    <b class="mediaInformationTag">#胜利的荣光#</b>
+                </b>
+                <b class="mediaInformation">
+                    <b class="mediaInformationIndex">15</b>
+                    <b class="mediaInformationTitle">谢拉格</b>
+                    <b class="mediaInformationTag">#喀兰贸易#</b>
+                </b>
+                <b class="mediaInformation">
+                    <b class="mediaInformationIndex">16</b>
+                    <b class="mediaInformationTitle">预备组</b>
+                    <b class="mediaInformationTag">#行动预备组A4#</b>
+                </b>
+                <b class="mediaInformation">
+                    <b class="mediaInformationIndex">17</b>
+                    <b class="mediaInformationTitle">整装出发</b>
+                    <b class="mediaInformationTag">#印象图#</b>
+                </b>
+                <b class="mediaInformation">
+                    <b class="mediaInformationIndex">18</b>
+                    <b class="mediaInformationTitle">追忆</b>
+                    <b class="mediaInformationTag">过去的村庄</b>
+                </b>
             </span>
             <span id="lastMediaListLi" onclick="lastMediaLi()"></span>
             <span id="nextMediaListLi" onclick="nextMediaLi()"></span>

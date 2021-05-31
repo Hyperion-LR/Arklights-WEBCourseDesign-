@@ -34,6 +34,7 @@ a:hover {
     height: 100vh;
     width: 100vw;
     padding-left: 4vw;
+    padding-right: 4vw;
 }
 
 .page h2 {
@@ -539,7 +540,7 @@ a:hover {
 .worldListLi b{
     float: right;
     font-size: 4vh;
-    font-family: 黑体;
+    font-family: "黑体";
     font-weight: bolder;
     line-height: 15vh;
     color: #9d9d9d;
@@ -763,6 +764,9 @@ a:hover {
 
 
 /* 档案页面 */
+#media{
+    padding-left: 0vw;
+}
 
 #media h2{
     position: relative;
@@ -771,6 +775,87 @@ a:hover {
     left: 24px; 
 }
 
+#mediaList{
+    text-align: center;
+    height: 90vh;
+}
+
+#mediaImg{
+    display: inline-block;
+    height: 54vh;
+    width: 47vw;
+    position: relative;
+    top: 5vh;
+    border: #22bbff 1px solid;
+}
+
+.mediaImgList{
+    display: inline-block;
+    height: 54vh;
+    position: absolute;
+    left: 0;
+    transform-origin: left top;
+    transform: scale(0);
+    transition: all 600ms;
+}
+
+#mediaListLis{
+    display: inline-block;
+    height: 16vh;
+    width: 300vw;
+    position: relative;
+    left: 7vw;
+    overflow: hidden;
+    margin-top: 12vh;
+    border: #22bbff 1px solid;
+}
+
+.mediaListLi{
+    display: inline-block;
+    height: 16vh;
+    width: 12vw;
+    position: relative;
+    left: 0vw;
+    margin-right: 2vw;
+    overflow: hidden;
+    padding: 0.5vw;
+    opacity: 1;
+    transition: all 600ms;
+    border: #22bbff 1px solid;
+}
+
+.mediaListLi img{
+    height: 14vh;
+    width: 12vw;
+    opacity: 1;
+    transition: all 300ms;
+}
+
+.mediaListLi img:hover{
+    transform: scale(1.1);
+}
+
+#lastMediaListLi{
+    display: inline-block;
+    height: 57px;
+    width: 27px;
+    position: relative;
+    top: -50vh;
+    left: 14vw;
+    background: url("../img/last.png") no-repeat;
+    border: #22bbff 1px solid;
+}
+
+#nextMediaListLi{
+    display: inline-block;
+    height: 57px;
+    width: 27px;
+    position: relative;
+    top: -50vh;
+    left: 80vw;
+    background: url("../img/next.png") no-repeat;
+    border: #22bbff 1px solid;
+}
 
 /* 页脚 */
 footer {

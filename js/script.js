@@ -20,6 +20,7 @@ function borderRight(nowPageNum) {
 }
 
 function windowAddMouseWheel() {
+    var nowPageAdd = true;
     var nowPage = 0;
     var nowPageNumber = document.getElementById("nowPageNumber");
     function getWindowHeight() {
@@ -33,7 +34,12 @@ function windowAddMouseWheel() {
         //判断浏览器IE，谷歌滑轮事件
         if (e.wheelDelta) {
             if (e.wheelDelta < 0) {
-                nowPage += 0.5;
+                if(nowPageAdd){
+                    nowPage += 1; 
+                    nowPageAdd = false;           
+                }else{
+                    nowPageAdd = true;   
+                }
                 nowPage = nowPage > 5 ? 5 : nowPage;
                 borderRight(nowPage);
                 var tagScrTop = nowPage * getWindowHeight();
@@ -45,7 +51,12 @@ function windowAddMouseWheel() {
                 // console.log(nowPage);
             }
             if (e.wheelDelta > 0) {
-                nowPage -= 0.5;
+                if(nowPageAdd){
+                    nowPage -= 1; 
+                    nowPageAdd = false;           
+                }else{
+                    nowPageAdd = true;   
+                }
                 nowPage = nowPage < 0 ? 0 : nowPage;
                 borderRight(nowPage);
                 var tagScrTop = nowPage * getWindowHeight();
@@ -58,7 +69,12 @@ function windowAddMouseWheel() {
             }
         } else if (e.detail) { //Firefox滑轮事件
             if (e.detail > 0) { //当滑轮向上滚动时
-                nowPage += 0.5;
+                if(nowPageAdd){
+                    nowPage += 1; 
+                    nowPageAdd = false;           
+                }else{
+                    nowPageAdd = true;   
+                }
                 nowPage = nowPage > 5 ? 5 : nowPage;
                 borderRight(nowPage);
                 var tagScrTop = nowPage * getWindowHeight();
@@ -70,7 +86,12 @@ function windowAddMouseWheel() {
                 // console.log(nowPage);
             }
             if (e.detail < 0) { //当滑轮向下滚动时
-                nowPage -= 0.5;
+                if(nowPageAdd){
+                    nowPage -= 1; 
+                    nowPageAdd = false;           
+                }else{
+                    nowPageAdd = true;   
+                }
                 nowPage = nowPage < 0 ? 0 : nowPage;
                 borderRight(nowPage);
                 var tagScrTop = nowPage * getWindowHeight();
@@ -516,3 +537,53 @@ function nextWorldList(){
 // 我也不知道为啥要加这句，但是不加的话导航栏会出BUG
 worldImg.style.display = "none";
 
+
+// 档案页面
+var nowMediaListLi = 0;
+var mediaListLi = document.getElementsByClassName("mediaListLi");
+var mediaImgList = document.getElementsByClassName("mediaImgList");
+//初始化
+mediaImgList[0].style.transform = "scale(1)";
+for(var i = 0; i < mediaListLi.length; ++i){
+    mediaListLi[i].style.opacity = "0";
+}
+mediaListLi[0].style.opacity = "1";
+mediaListLi[1].style.opacity = "1";
+mediaListLi[2].style.opacity = "1";
+mediaListLi[3].style.opacity = "1";
+function ToMediaListLi(index){
+    var play = index;
+    // 防止出界
+    if(index == 0){
+        index = 1;
+    }else if(index > 15){
+        index = 15;
+    }
+    var to = -(index - 1);
+
+    for(var i = 0; i < mediaListLi.length; ++i){
+        mediaListLi[i].style.opacity = "0";
+        mediaListLi[i].style.left = to * 15 + "vw";
+    }
+    for(var i = index - 1; i < index + 3; ++i){
+        mediaListLi[i].style.opacity = "1";
+    }
+    if(nowMediaListLi < play){
+        mediaImgList[nowMediaListLi].style.transformOrigin = "left top";
+        mediaImgList[play].style.transformOrigin = "right bottom";
+    }else{
+        mediaImgList[nowMediaListLi].style.transformOrigin = "right bottom";
+        mediaImgList[play].style.transformOrigin = "left top";
+    }
+    mediaImgList[nowMediaListLi].style.transform = "scale(0)";
+    mediaImgList[play].style.transform = "scale(1)";
+    nowMediaListLi = play;
+}
+
+function lastMediaLi(){
+    ToMediaListLi((nowMediaListLi + 17) % 18);
+}
+
+function nextMediaLi(){
+    ToMediaListLi((nowMediaListLi + 1) % 18);
+}
