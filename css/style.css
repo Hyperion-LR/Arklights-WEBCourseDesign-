@@ -764,6 +764,13 @@ a:hover {
 
 /* 档案页面 */
 
+#media h2{
+    position: relative;
+    font-size: 32px;
+    top: 36px;
+    left: 24px; 
+}
+
 
 /* 页脚 */
 footer {
