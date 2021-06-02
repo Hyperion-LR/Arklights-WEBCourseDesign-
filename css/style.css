@@ -786,7 +786,7 @@ a:hover {
     width: 47vw;
     position: relative;
     top: 5vh;
-    border: #22bbff 1px solid;
+    /*border: #22bbff 1px solid;*/
 }
 
 .mediaImgList{
@@ -807,7 +807,7 @@ a:hover {
     left: 7vw;
     overflow: hidden;
     margin-top: 12vh;
-    border: #22bbff 1px solid;
+    /*border: #22bbff 1px solid;*/
 }
 
 .mediaListLi{
@@ -821,7 +821,7 @@ a:hover {
     padding: 0.5vw;
     opacity: 1;
     transition: all 600ms;
-    border: #22bbff 1px solid;
+    /*border: #22bbff 1px solid;*/
 }
 
 .mediaListLi img{
@@ -843,7 +843,7 @@ a:hover {
     top: -50vh;
     left: 14vw;
     background: url("../img/last.png") no-repeat;
-    border: #22bbff 1px solid;
+    /*border: #22bbff 1px solid;*/
 }
 
 #nextMediaListLi{
@@ -854,7 +854,7 @@ a:hover {
     top: -50vh;
     left: 80vw;
     background: url("../img/next.png") no-repeat;
-    border: #22bbff 1px solid;
+    /*border: #22bbff 1px solid;*/
 }
 
 /* 页脚 */
