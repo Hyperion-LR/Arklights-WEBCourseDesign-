@@ -542,7 +542,15 @@ worldImg.style.display = "none";
 var nowMediaListLi = 0;
 var mediaListLi = document.getElementsByClassName("mediaListLi");
 var mediaImgList = document.getElementsByClassName("mediaImgList");
+var mediaInformations = document.getElementsByClassName("mediaInformations");
+var mediaInformation = document.getElementsByClassName("mediaInformation");
+var mediaInformationIndex = document.getElementsByClassName("mediaInformationIndex");
+var mediaInformationTitle = document.getElementsByClassName("mediaInformationTitle");
+var mediaInformationTag = document.getElementsByClassName("mediaInformationTag");
 //初始化
+mediaInformationIndex[0].style.opacity = "1";
+mediaInformationTitle[0].style.opacity = "1";
+mediaInformationTag[0].style.opacity = "1";
 mediaImgList[0].style.transform = "scale(1)";
 for(var i = 0; i < mediaListLi.length; ++i){
     mediaListLi[i].style.opacity = "0";
@@ -578,6 +586,42 @@ function ToMediaListLi(index){
     mediaImgList[nowMediaListLi].style.transform = "scale(0)";
     mediaImgList[play].style.transform = "scale(1)";
     nowMediaListLi = play;
+
+    for(var i = 0; i < mediaInformationIndex.length; ++i){
+        mediaInformationIndex[i].style.opacity = "0";
+        mediaInformationTitle[i].style.opacity = "0";
+        mediaInformationTag[i].style.opacity = "0";
+    }
+    setTimeout(()=>{
+        for(var i = 0; i < mediaInformationIndex.length; ++i){
+            mediaInformationIndex[i].style.paddingLeft = "0";            
+        }
+    }, 10);
+    setTimeout(()=>{
+        for(var i = 0; i < mediaInformationIndex.length; ++i){
+            mediaInformationTitle[i].style.paddingLeft = "0";  
+        }      
+    }, 100);
+    setTimeout(()=>{
+        for(var i = 0; i < mediaInformationIndex.length; ++i){
+            mediaInformationTag[i].style.paddingLeft = "0";             
+        }
+    }, 150);
+    setTimeout(()=>{
+        mediaInformationIndex[play].style.opacity = "1";
+        mediaInformationTitle[play].style.opacity = "1";
+        mediaInformationTag[play].style.opacity = "1";
+    }, 600);
+    setTimeout(()=>{
+        mediaInformationIndex[play].style.paddingLeft = "4vw";
+    }, 600);
+    setTimeout(()=>{
+        mediaInformationTitle[play].style.paddingLeft = "4vw";        
+    }, 700);
+    setTimeout(()=>{
+        mediaInformationTag[play].style.paddingLeft = "4vw";        
+    }, 750);
+
 }
 
 function lastMediaLi(){
