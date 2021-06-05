@@ -15,13 +15,14 @@ function borderRight(nowPageNum) {
         navPageLi[i].style.borderRight = "none";
         navPageButton[i].style.color = "#fff";
     }
-    navPageLi[nowPageNum].style.borderRight = "4px #22bbff solid";
-    navPageButton[nowPageNum].style.color = "#22bbff";
+    if(nowPageNum < 5){
+        navPageLi[nowPageNum].style.borderRight = "4px #22bbff solid";
+        navPageButton[nowPageNum].style.color = "#22bbff";        
+    }
 }
-
+var nowPage = 0;
 function windowAddMouseWheel() {
     var nowPageAdd = true;
-    var nowPage = 0;
     var nowPageNumber = document.getElementById("nowPageNumber");
     function getWindowHeight() {
         var h = parseInt(window.innerHeight);
@@ -124,6 +125,7 @@ function windowAddMouseWheel() {
 function onclickPageList(to) {
     //console.log(to);
     borderRight(to);
+    nowPage = to;
 }
 
 // information页面轮播图
