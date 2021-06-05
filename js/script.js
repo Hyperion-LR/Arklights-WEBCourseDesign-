@@ -227,7 +227,7 @@ function changeStaffImg(to) {
         // console.log(staffImg);
         to = ((to - 2) + 13) % 13;
         to = to==0 ? 13:to;
-        var ToSrc = "./img/" + to + ".png";
+        var ToSrc = "./img/index/" + to + ".png";
         function setStaffImg(){
             staffImg.style.opacity = 1;
             staffImg.src = ToSrc;
@@ -259,7 +259,7 @@ document.addEventListener('mousemove', function(e) {
 
 for(var i = 0; i < worldListLi.length; ++i){
     worldListLi[i].onmouseover = function(){
-        worldImg.src = "./img/world" + this.dataset.src + ".png";
+        worldImg.src = "./img/index/world" + this.dataset.src + ".png";
         worldImg.style.display = "inline-block";
         worldListLi[parseInt(this.dataset.src) - 1].getElementsByTagName("b")[0].style.color = "#fdfdfd";
     }
@@ -325,7 +325,7 @@ function worldListLoad(){
         }
     }, 2800);
     setTimeout(()=>{
-        worldListLiImg.src = "./img/world" + worldIndex + ".png";
+        worldListLiImg.src = "./img/index/world" + worldIndex + ".png";
         worldListLiImg.style.opacity = "1";
     }, 3200);
     setTimeout(()=>{
@@ -465,7 +465,7 @@ function lastWorldList(){
     setTimeout(()=>{
         worldListLisInformation[worldIndex - 1].style.display = "none";
         worldIndex = (worldIndex + worldListLi.length - 2) % worldListLi.length + 1;
-        worldListLiImg.src = "./img/world" + worldIndex + ".png";
+        worldListLiImg.src = "./img/index/world" + worldIndex + ".png";
         worldListLiImg.style.opacity = "1";
         worldListLisInformation[worldIndex - 1].style.display = "inline-block";        
     }, 600);
@@ -511,7 +511,7 @@ function nextWorldList(){
         worldListLisInformation[worldIndex - 1].style.display = "none";
         worldIndex = (worldIndex +  1) % worldListLi.length;
         worldIndex = worldIndex == 0 ? 6 : worldIndex;
-        worldListLiImg.src = "./img/world" + worldIndex + ".png";
+        worldListLiImg.src = "./img/index/world" + worldIndex + ".png";
         worldListLiImg.style.opacity = "1";
         worldListLisInformation[worldIndex - 1].style.display = "inline-block";        
     }, 600);

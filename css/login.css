@@ -1,0 +1,266 @@
+* {
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+}
+
+#pageHead {
+    background-color: #fff;
+    height: 8vh;
+    width: 100vw;
+    box-shadow: 0 2px 5px -2px rgb(9 2 4 / 80%);
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#pageHead img {
+    height: 6vh;
+}
+
+#pageBody {
+    margin-top: 4px;
+    height: 84vh;
+    background: url("../img/login/background.png") no-repeat 0 -200px;
+    background-size: 100% auto;
+}
+
+#signIn {
+    height: 38vh;
+    width: 20vw;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px -2px rgb(9 2 4 / 80%);
+    position: absolute;
+    top: 28vh;
+    left: 50vw;
+    margin-left: -10vw;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    overflow: hidden;
+    transform: rotateY(0deg);
+    opacity: 1;
+    transition: all 600ms, opacity 1ms;
+    z-index: 2;
+}
+
+.loginTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #158fc5;
+    line-height: 96px;
+    margin: 10px;
+}
+
+#signIn a {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: bolder;
+    font-family: "Microsoft YaHei";
+    color: #158fc5;
+    position: relative;
+    left: -68px;
+    margin-bottom: 20px;
+}
+
+.account {
+    height: 30px;
+    width: 240px;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 12px;
+    font-weight: normal;
+    color: #5a5a5a;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.account:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.ERRORInformation p {
+    font-size: 12px;
+    font-weight: normal;
+    text-align: left;
+    color: #fe1610;
+    padding-left: 30px;
+}
+
+.pwb {
+    height: 30px;
+    width: 240px;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 12px;
+    font-weight: normal;
+    color: #5a5a5a;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.pwb:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#signInPwb {
+    padding-left: 0px;
+}
+
+#signInOfPassword {
+    float: left;
+    margin-left: 2.2vw;
+    margin-top: 2px;
+    height: 60px;
+}
+
+#signInOfVerification {
+    float: left;
+    margin-left: 2.2vw;
+    height: 60px;
+    display: none;
+}
+
+#signInSubmit {
+    font-size: 16px;
+    font-weight: bolder;
+    color: #fff;
+    height: 30px;
+    width: 240px;
+    border: none;
+    border-radius: 15px;
+    background-color: #158fc5;
+}
+
+#signUp {
+    display: inline-block;
+    height: 52vh;
+    width: 20vw;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px -2px rgb(9 2 4 / 80%);
+    position: absolute;
+    top: 18vh;
+    left: 50vw;
+    margin-left: -10vw;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    overflow: hidden;
+    transform: rotateY(0deg);
+    opacity: 0;
+    transition: all 600ms, opacity 1ms;
+    z-index: 1;
+}
+
+.verification {
+    height: 30px;
+    width: 120px;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 12px;
+    font-weight: normal;
+    color: #5a5a5a;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.verification:focus {
+    outline: none;
+}
+
+.getVerification {
+    font-size: 16px;
+    font-weight: bolder;
+    color: #fff;
+    height: 30px;
+    width: 120px;
+    border: none;
+    border-radius: 15px;
+    background-color: #797979;
+}
+
+.articlesBox {
+    height: 8px;
+    background-color: rgba(0, 0, 0, 1);
+    border: 1px solid #000;
+    margin-top: 10px;
+}
+
+.articles {
+    font-size: 12px;
+    font-weight: normal;
+    font-family: "Microsoft YaHei";
+    color: #000;
+}
+
+#article1 {
+    font-size: 12px;
+    font-weight: normal;
+    font-family: "Microsoft YaHei";
+    color: #158fc5;
+}
+
+#signUpArticle{
+    margin-left: 6px;
+    margin-bottom: 20px;
+}
+
+#signUpSubmit {
+    font-size: 16px;
+    font-weight: bolder;
+    color: #fff;
+    height: 30px;
+    width: 240px;
+    border: none;
+    border-radius: 15px;
+    background-color: #158fc5;
+}
+
+#loginButton {
+    display: inline-block;
+    height: 30px;
+    width: 150px;
+    position: absolute;
+    top: 75vh;
+    left: 50vw;
+    margin-left: -70px;
+    text-align: center;
+    border-radius: 15px;
+    background-color: #fff;
+    transition: all 300ms;
+}
+
+#signInButton {
+    height: 28px;
+    width: 60px;
+    font-size: 22px;
+    font-weight: bolder;
+    color: #158fc5;
+    line-height: 20px;
+    text-align: center;
+    border: none;
+    background-color: #fff;
+    transition: all 300ms;
+}
+
+#signUpButton {
+    height: 28px;
+    width: 60px;
+    font-size: 18px;
+    font-weight: bolder;
+    color: black;
+    line-height: 20px;
+    text-align: center;
+    border: none;
+    background-color: #fff;
+}
+
+#pageFooter {
+    padding-top: 4px;
+}
+
+#pageFooter p {
+    font-size: 12px;
+    font-weight: bolder;
+    font-family: "Microsoft YaHei";
+    color: black;
+    line-height: 16px;
+    text-align: center;
+}
