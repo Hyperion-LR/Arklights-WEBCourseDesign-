@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    user-select: none;
+}
+
+#header{
+    height: 6vh;
+    margin: 1vh;
+    overflow: hidden;
+    text-align: right;
+    overflow: visible;
+}
+
+#switchOfMeanu{
+    height: 6vh;
+    width: 6vh;
+    float: left;
+    margin-left: 1vw;
+    transform: scale(0.5);
+    transition: all 300ms;
+}
+
+#switchOfMeanu:hover{
+    transform: scale(0.6);
+}
+
+#buttonLogIn{
+    display: inline-block;
+    font-size: 12px;
+    color: #c9cbd0;
+    text-decoration: none;
+    line-height: 6vh;
+    margin-right: 2vw;
+}
+
+#buttonLogon{
+    display: inline-block;
+    font-size: 12px;
+    color: #c9cbd0;
+    text-decoration: none;
+    line-height: 6vh;
+    margin-right: 4vw;
+}
+
+.informationPage{
+    height: 100vh;
+    text-align: center;
+    background-image: url("../../img/index/background.jpg");
+}
+
+#informationNav{
+    display: inline-block;
+    height: 6vh;
+    width: 80.5vw;
+    overflow: hidden;
+    border: 1px solid #535353;
+    margin-bottom: 10px;
+}
+
+#informationNav b{
+    float: right;
+    line-height: 6vh;
+    width: 4vw;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #fff;
+    text-align: center;
+}
+
+#informationTable{
+    display: inline-block;
+    height: 72vh;
+    width: 81vw;
+    overflow: visible;
+    border-collapse: collapse;
+}
+
+#informationTable td{
+    display: inline-block;
+    height: 24vh;
+    width: 33%;
+    border: 1px solid #535353;
+
+}
+
+.type{
+    font-size: 14px;
+    color: #fff;
+    display: inline-block;
+    height: 6vh;
+    width: 3vw;
+    margin-left: -16vw;
+    margin-top: 2vh;
+    border-bottom: 4px solid #22bbff;
+}
+
+.time{
+    font-size: 8px;
+    color: #fff;
+    position: relative;
+    top: -4vh;
+    left: 15vw;
+}
+
+.title{
+    font-size: 8px;
+    font-weight: normal;
+    color: #fff;
+    display: inline-block;
+    width: 27vw;
+    line-height: 6vh;
+    margin: 2vh;
+    position: relative;
+    left: -7vw;
+}
+
+.readmore{
+    font-size: 8px;
+    font-weight: normal;
+    color: #000;
+    padding: 2px 2px 2px 16px;
+    margin: 2vh;
+    position: relative;
+    left: 8vw;
+    background-color: #22bbff;
+}
+
+/* 页脚 */
+#footer {
+    font: normal normal 14px "SansRegular";
+    color: #fff;
+    height: 40vh;
+    background-color: #141516;
+}
+hr{
+    border:none;
+    border-top:1px solid #505050;
+}
+#friend {
+    text-align: center;
+    margin-top: 30px;
+}
+.friend{
+    text-align: center;
+}
+
+.friendLi{
+    display: inline-block;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+}
+
+.friendLi a{
+    display: inline-block;
+    font: normal normal 14px "SansRegular";
+    color: #fff;
+    line-height: 24px;
+    text-decoration: none;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#footerInforMation{
+    display: block;
+    height: 12vh;
+    width: 32vw;
+    margin: auto;
+    overflow: hidden;
+}
+
+.footerInforMationLi{
+    float: left;
+    font: normal normal 12px "SansRegular";
+    color: #979797;
+    line-height: 12px;
+    width: 15vw;
+    text-align: center;
+    padding: 5px;
+}
+
+#footerPromptInforMation{
+    font: normal normal 12px "SansRegular";
+    color: #979797;
+    text-align: center;
+    position: relative;
+    top: -4vh;
+}
+
+#footImgLog{
+    height: 12vh;
+    position: absolute;
+}
+
+#footImgAge{
+    height: 12vh;
+    position: absolute;
+    left: 20vw;
+}
+
+#footMessage{
+    padding-top: 2vh;
+}
+
+#footMessage p{
+    font: normal normal 12px "SansRegular";
+    color: #979797;
+    line-height: 24px;
+    text-align: center;
+}
