@@ -4,9 +4,12 @@
     border: 0;
     font-size: 0;
     scroll-behavior: smooth;
-    overflow-x: hidden;
-    overflow-y: hidden;
     user-select: none;
+}
+
+body {
+    background: url("../../img/index/background.jpg") no-repeat fixed;
+    background-size: 100vw 100vh;
 }
 
 #header{
@@ -16,7 +19,6 @@
     text-align: right;
     overflow: visible;
 }
-
 #switchOfMeanu{
     height: 6vh;
     width: 6vh;
@@ -51,7 +53,6 @@
 .informationPage{
     height: 100vh;
     text-align: center;
-    background-image: url("../../img/index/background.jpg");
 }
 
 #informationNav{
@@ -71,9 +72,10 @@
     font-weight: bolder;
     color: #fff;
     text-align: center;
+    transition: all 300ms;
 }
 
-#informationTable{
+.informationTable{
     display: inline-block;
     height: 72vh;
     width: 81vw;
@@ -81,12 +83,11 @@
     border-collapse: collapse;
 }
 
-#informationTable td{
+.informationTable td{
     display: inline-block;
     height: 24vh;
     width: 33%;
     border: 1px solid #535353;
-
 }
 
 .informationTableLi{
@@ -95,6 +96,21 @@
     width: 27vw;
     overflow: hidden;
     text-align: left;
+    transition: all 200ms;
+}
+
+.informationTableLi:hover{
+    background-color: #22bbff;
+
+}
+
+.informationTableLi:hover.informationTableLi b{
+    color: #000;
+}
+
+.informationTableLi:hover.informationTableLi .readmore{
+    color: #fff;
+    background-color: #000;
 }
 
 .type{
@@ -110,7 +126,7 @@
     font-size: 8px;
     color: #fff;
     position: relative;
-    left: 17vw;
+    left: 16vw;
     top: -5vh;
 }
 
@@ -136,6 +152,15 @@
     padding-left: 32px;
     margin-left: 16vw;
     background-color: #22bbff;
+}
+
+#informationNumber b{
+    font-size: 18px;
+    font-weight: normal;
+    color: #535353;
+    margin: 10px;
+    position: relative;
+    top: 4vh;
 }
 
 /* 页脚 */

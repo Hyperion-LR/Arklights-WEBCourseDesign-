@@ -10,21 +10,21 @@
 <body>
     <div class="informationPage">
         <div id="header">
-            <img id="switchOfMeanu" src="../../img/informationMore/out.png">
+            <img id="switchOfMeanu" src="../../img/informationMore/in.png">
             <a id="buttonLogIn" href="../signIn.html">登录</a>
             <a id="buttonLogon" href="../signUp.html" target="_blank">注册</a>
         </div>
         <nav id="informationNav">
-            <b id="informationTypeNew">新闻</b>
-            <b id="informationTypeActive">活动</b>
-            <b id="informationTypeAnnouncement">公告</b>
-            <b id="informationTypeNow">最新</b>
+            <b class="informationNavLi" id="informationTypeNew" onclick="toInformationNavLi(0)">新闻</b>
+            <b class="informationNavLi" id="informationTypeActive" onclick="toInformationNavLi(1)">活动</b>
+            <b class="informationNavLi" id="informationTypeAnnouncement" onclick="toInformationNavLi(2)">公告</b>
+            <b class="informationNavLi" id="informationTypeNow" onclick="toInformationNavLi(3)">最新</b>
         </nav>
-        <table id="informationTable">
+        <table class="informationTable" id="informationTableNow">
             <tr>
                 <td>
                     <a class="informationTableLi">
-                        <b class="type">新闻</b>
+                        <b class="type">1新闻</b>
                         <b class="time">2021-05-20</b><br>
                         <b class="title">制作组通讯#11</b><br>
                         <b class="readmore">READ MORE +</b>
@@ -101,6 +101,256 @@
             </tr>
 
         </table>
+        <table class="informationTable" id="informationTableAnnouncement">
+            <tr>
+                <td>
+                    <a class="informationTableLi">
+                        <b class="type">2新闻</b>
+                        <b class="time">2021-05-20</b><br>
+                        <b class="title">制作组通讯#11</b><br>
+                        <b class="readmore">READ MORE +</b>
+                    </a>
+                </td>
+                <td>
+                    <a class="informationTableLi">
+                        <b class="type">新闻</b>
+                        <b class="time">2021-05-20</b><br>
+                        <b class="title">《明日方舟》制作组通讯#11</b><br>
+                        <b class="readmore">READ MORE +</b>
+                    </a>
+                </td>
+                <td>
+                    <a class="informationTableLi">
+                        <b class="type">新闻</b>
+                        <b class="time">2021-05-20</b><br>
+                        <b class="title">《明日方舟》制作组通讯#11</b><br>
+                        <b class="readmore">READ MORE +</b>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="informationTableLi">
+                        <b class="type">新闻</b>
+                        <b class="time">2021-05-20</b><br>
+                        <b class="title">《明日方舟》制作组通讯#11</b><br>
+                        <b class="readmore">READ MORE +</b>
+                    </a>
+                </td>
+                <td>
+                    <a class="informationTableLi">
+                        <b class="type">新闻</b>
+                        <b class="time">2021-05-20</b><br>
+                        <b class="title">《明日方舟》制作组通讯#11</b><br>
+                        <b class="readmore">READ MORE +</b>
+                    </a>
+                </td>
+                <td>
+                    <a class="informationTableLi">
+                        <b class="type">新闻</b>
+                        <b class="time">2021-05-20</b><br>
+                        <b class="title">《明日方舟》制作组通讯#11</b><br>
+                        <b class="readmore">READ MORE +</b>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="informationTableLi">
+                        <b class="type">新闻</b>
+                        <b class="time">2021-05-20</b><br>
+                        <b class="title">《明日方舟》制作组通讯#11</b><br>
+                        <b class="readmore">READ MORE +</b>
+                    </a>
+                </td>
+                <td>
+                    <a class="informationTableLi">
+                        <b class="type">新闻</b>
+                        <b class="time">2021-05-20</b><br>
+                        <b class="title">《明日方舟》制作组通讯#11</b><br>
+                        <b class="readmore">READ MORE +</b>
+                    </a>
+                </td>
+                <td>
+                    <a class="informationTableLi">
+                        <b class="type">新闻</b>
+                        <b class="time">2021-05-20</b><br>
+                        <b class="title">《明日方舟》制作组通讯#11</b><br>
+                        <b class="readmore">READ MORE +</b>
+                    </a>
+                </td>
+            </tr>
+
+        </table>
+        <table class="informationTable" id="informationTableActive">
+            <tr>
+                <td>
+                    <a class="informationTableLi">
+                        <b class="type">3新闻</b>
+                        <b class="time">2021-05-20</b><br>
+                        <b class="title">制作组通讯#11</b><br>
+                        <b class="readmore">READ MORE +</b>
+                    </a>
+                </td>
+                <td>
+                    <a class="informationTableLi">
+                        <b class="type">新闻</b>
+                        <b class="time">2021-05-20</b><br>
+                        <b class="title">《明日方舟》制作组通讯#11</b><br>
+                        <b class="readmore">READ MORE +</b>
+                    </a>
+                </td>
+                <td>
+                    <a class="informationTableLi">
+                        <b class="type">新闻</b>
+                        <b class="time">2021-05-20</b><br>
+                        <b class="title">《明日方舟》制作组通讯#11</b><br>
+                        <b class="readmore">READ MORE +</b>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="informationTableLi">
+                        <b class="type">新闻</b>
+                        <b class="time">2021-05-20</b><br>
+                        <b class="title">《明日方舟》制作组通讯#11</b><br>
+                        <b class="readmore">READ MORE +</b>
+                    </a>
+                </td>
+                <td>
+                    <a class="informationTableLi">
+                        <b class="type">新闻</b>
+                        <b class="time">2021-05-20</b><br>
+                        <b class="title">《明日方舟》制作组通讯#11</b><br>
+                        <b class="readmore">READ MORE +</b>
+                    </a>
+                </td>
+                <td>
+                    <a class="informationTableLi">
+                        <b class="type">新闻</b>
+                        <b class="time">2021-05-20</b><br>
+                        <b class="title">《明日方舟》制作组通讯#11</b><br>
+                        <b class="readmore">READ MORE +</b>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="informationTableLi">
+                        <b class="type">新闻</b>
+                        <b class="time">2021-05-20</b><br>
+                        <b class="title">《明日方舟》制作组通讯#11</b><br>
+                        <b class="readmore">READ MORE +</b>
+                    </a>
+                </td>
+                <td>
+                    <a class="informationTableLi">
+                        <b class="type">新闻</b>
+                        <b class="time">2021-05-20</b><br>
+                        <b class="title">《明日方舟》制作组通讯#11</b><br>
+                        <b class="readmore">READ MORE +</b>
+                    </a>
+                </td>
+                <td>
+                    <a class="informationTableLi">
+                        <b class="type">新闻</b>
+                        <b class="time">2021-05-20</b><br>
+                        <b class="title">《明日方舟》制作组通讯#11</b><br>
+                        <b class="readmore">READ MORE +</b>
+                    </a>
+                </td>
+            </tr>
+
+        </table>
+        <table class="informationTable" id="informationTableNew">
+            <tr>
+                <td>
+                    <a class="informationTableLi">
+                        <b class="type">4新闻</b>
+                        <b class="time">2021-05-20</b><br>
+                        <b class="title">制作组通讯#11</b><br>
+                        <b class="readmore">READ MORE +</b>
+                    </a>
+                </td>
+                <td>
+                    <a class="informationTableLi">
+                        <b class="type">新闻</b>
+                        <b class="time">2021-05-20</b><br>
+                        <b class="title">《明日方舟》制作组通讯#11</b><br>
+                        <b class="readmore">READ MORE +</b>
+                    </a>
+                </td>
+                <td>
+                    <a class="informationTableLi">
+                        <b class="type">新闻</b>
+                        <b class="time">2021-05-20</b><br>
+                        <b class="title">《明日方舟》制作组通讯#11</b><br>
+                        <b class="readmore">READ MORE +</b>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="informationTableLi">
+                        <b class="type">新闻</b>
+                        <b class="time">2021-05-20</b><br>
+                        <b class="title">《明日方舟》制作组通讯#11</b><br>
+                        <b class="readmore">READ MORE +</b>
+                    </a>
+                </td>
+                <td>
+                    <a class="informationTableLi">
+                        <b class="type">新闻</b>
+                        <b class="time">2021-05-20</b><br>
+                        <b class="title">《明日方舟》制作组通讯#11</b><br>
+                        <b class="readmore">READ MORE +</b>
+                    </a>
+                </td>
+                <td>
+                    <a class="informationTableLi">
+                        <b class="type">新闻</b>
+                        <b class="time">2021-05-20</b><br>
+                        <b class="title">《明日方舟》制作组通讯#11</b><br>
+                        <b class="readmore">READ MORE +</b>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="informationTableLi">
+                        <b class="type">新闻</b>
+                        <b class="time">2021-05-20</b><br>
+                        <b class="title">《明日方舟》制作组通讯#11</b><br>
+                        <b class="readmore">READ MORE +</b>
+                    </a>
+                </td>
+                <td>
+                    <a class="informationTableLi">
+                        <b class="type">新闻</b>
+                        <b class="time">2021-05-20</b><br>
+                        <b class="title">《明日方舟》制作组通讯#11</b><br>
+                        <b class="readmore">READ MORE +</b>
+                    </a>
+                </td>
+                <td>
+                    <a class="informationTableLi">
+                        <b class="type">新闻</b>
+                        <b class="time">2021-05-20</b><br>
+                        <b class="title">《明日方舟》制作组通讯#11</b><br>
+                        <b class="readmore">READ MORE +</b>
+                    </a>
+                </td>
+            </tr>
+
+        </table>
+        <div id="informationNumber">
+            <b>上一页</b>
+            <b>1</b>
+            <b>2</b>
+            <b>3</b>
+            <b>下一页</b>
+        </div>
     </div>
 
     <footer id="footer">
