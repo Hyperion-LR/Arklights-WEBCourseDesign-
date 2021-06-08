@@ -91,6 +91,10 @@ function loginCheck() {
             signInPwbInput.style.backgroundColor = "#ffdcdb";
             res = false;
         }
+        if(res){
+            location.href="../html/userHome.html";
+            res = false;
+        }
         return res;
     }
 }
@@ -187,3 +191,4 @@ function logUpCheck() {
         return res;
     }
 }
+

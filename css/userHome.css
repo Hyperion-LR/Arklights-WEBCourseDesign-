@@ -1,0 +1,367 @@
+* {
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+    font-family: "Microsoft YaHei";
+}
+
+body {
+    background: url("../img/login/background.png") no-repeat 0 -100px fixed;
+    background-size: 100%;
+}
+
+#pageHead {
+    position: fixed;
+    background-color: #fff;
+    height: 9vh;
+    width: 100vw;
+    box-shadow: 0 2px 5px -2px rgb(9 2 4 / 80%);
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    z-index: 3;
+}
+
+#pageHead img {
+    height: 6vh;
+}
+
+#pageLog{
+    padding: 2vh;
+    transform: scale(1.2);
+}
+
+#pageMeanu{
+    position: fixed;
+    top: -100vh;
+    height: 100vh;
+    width: 25vw;
+    background-color: rgba(21, 143, 197, 0.9);
+    z-index: 3;
+    transition: all 600ms;
+}
+
+#meanuButton{
+    float: left;
+    padding: 1vh;
+    transform: scale(0.5);
+}
+
+#loginOut{
+    float: right;
+    padding: 2vh;
+    margin-right: 1vw;
+}
+
+#meanuOut{
+    margin: 2vh 1.5vw 2vh 1.5vw;
+}
+
+#meanuList{
+    width: 20vw;
+    height: 48vh;
+    margin-left: 2.5vw;
+    border-left: 1px solid #fff;
+    text-align: center;
+}
+
+#meanuLi{
+    display: inline-block;
+    width: 100%;
+    line-height: 12vh;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    border-bottom: 1px solid #3ea1cd;
+}
+
+#pageBody{
+    text-align: center;
+}
+
+#nowAccount{
+    display: inline-block;
+    line-height: 20px;
+    width: 160px;
+    font-size: 12px;
+    font-weight: normal;
+    color: #fff;
+    background-color: #158fc5;
+    border-radius: 15px;
+    text-align: center;
+    margin: 4vh;
+}
+
+#AccountInformation{
+    height: 30vh;
+}
+
+#userAccountInformation{
+    font-size: 16px;
+    font-weight: normal;
+    color: #000;
+    float: left;
+    margin: 2vh 16vw 2vh 1vw;
+    padding-left: 24px;
+    background: url("../img/userHome/AccountInformation.png") no-repeat -4px 0px;
+    background-size: 24px;
+}
+
+.Card{
+    float: left;
+    height: 10vh;
+    width: 26vw;
+    margin-left: 2vw;
+}
+
+.CardName{
+    font-size: 12px;
+    font-weight: bolder;
+    color: #158fc5;
+    float: left;
+}
+
+.CardPhone{
+    font-size: 16px;
+    font-weight: normal;
+    color: #000;
+    display: inline-block;
+    height: 4vh;
+    width: 18vw;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+    top: 2vh;
+    left: -5.5vw;
+    text-align: left;
+    margin-top: 2vh;
+}
+
+.CardEmail{
+    font-size: 16px;
+    font-weight: normal;
+    color: #000;
+    display: inline-block;
+    height: 4vh;
+    width: 18vw;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+    top: 2vh;
+    left: -5.5vw;
+    text-align: left;
+    margin-top: 2vh;
+}
+
+.AccountInformationChange{
+    display: inline-block;
+    height: 4vh;
+    width: 6vw;
+    font-size: 16px;
+    font-weight: bolder;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    background-color: #158fc5;
+    position: relative;
+    left: 10vw;
+    top: -2vh;
+    margin-left: -1vw;
+}
+
+#AccountRoleInformation{
+    height: 30vh;
+}
+
+#userAccountRoleInformation{
+    font-size: 16px;
+    font-weight: normal;
+    color: #000;
+    float: left;
+    margin: 2vh 16vw 2vh 1vw;
+    padding-left: 24px;
+    background: url("../img/userHome/AccountInformation.png") no-repeat -4px 0px;
+    background-size: 24px;
+}
+
+.cardRole{
+    font-size: 16px;
+    font-weight: normal;
+    color: #000;
+    display: inline-block;
+    height: 4vh;
+    width: 26vw;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+    top: 2vh;
+    text-align: left;
+}
+
+.cardRoleName{
+    font-size: 16px;
+    font-weight: normal;
+    color: #000;
+    display: inline-block;
+    height: 4vh;
+    width: 26vw;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+    top: 2vh;
+    text-align: left;
+}
+
+#RealNameInformation{
+    height: 30vh;
+}
+
+#userRealNameInformation{
+    font-size: 16px;
+    font-weight: normal;
+    color: #000;
+    float: left;
+    margin: 2vh 16vw 2vh 1vw;
+    padding-left: 24px;
+    background: url("../img/userHome/AccountInformation.png") no-repeat -4px 0px;
+    background-size: 24px;
+}
+
+.cardRealName{
+    font-size: 16px;
+    font-weight: normal;
+    color: #000;
+    display: inline-block;
+    height: 4vh;
+    width: 26vw;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+    top: 2vh;
+    text-align: left;
+    margin-top: 2vh;
+}
+
+.bigCardName{
+    font-size: 16px;
+    font-weight: normal;
+    color: #000;
+    float: left;
+    margin: 2vh 16vw 2vh 1vw;
+    padding-left: 24px;
+    background: url("../img/userHome/AccountInformation.png") no-repeat -4px 0px;
+    background-size: 24px;
+}
+
+/* 菜单 */
+/* 重置密码 */
+#SetNewPwb{
+    height: 50vh;
+}
+
+#userSetNewPwb{
+    font-size: 16px;
+    font-weight: normal;
+    color: #000;
+    float: left;
+    margin: 2vh 16vw 2vh 1vw;
+    padding-left: 24px;
+    background: url("../img/userHome/AccountInformation.png") no-repeat -4px 0px;
+    background-size: 24px;    
+}
+
+#NewPwb {
+    height: 30px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 14px;
+    font-weight: normal;
+    color: #5a5a5a;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 2vh 2vh 2vh 0vh;
+}
+
+#NewPwb:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#reNewPwb{
+    height: 30px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 14px;
+    font-weight: normal;
+    color: #5a5a5a;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 2vh 2vh 2vh 0vh;
+}
+
+#reNewPwb:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#verification{
+    height: 30px;
+    width: 60%;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 14px;
+    font-weight: normal;
+    color: #5a5a5a;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 4vh 6vh 2vh -2.5vw;
+}
+
+#verification:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#getVerification{
+    display: inline-block;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bolder;
+    height: 30px;
+    width: 27%;
+    border: none;
+    border-radius: 15px;
+    background-color: #158fc5;
+}
+
+.bigCard{
+    display: inline-block;
+    height: 30vh;
+    width: 30vw;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px -2px rgb(9 2 4 / 80%);
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 2vh 40vh;
+    overflow: hidden;
+}
+
+#submitNewPwb{
+    display: inline-block;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bolder;
+    height: 30px;
+    width: 24vw;
+    border: none;
+    border-radius: 15px;
+    background-color: #158fc5;
+    margin: 2vh;
+}
+
+#pageFooter {
+    padding-top: 4px;
+    background-color: #fff;
+}
+
+#pageFooter p {
+    font-size: 12px;
+    font-weight: bolder;
+    font-family: "Microsoft YaHei";
+    color: black;
+    line-height: 16px;
+    text-align: center;
+}

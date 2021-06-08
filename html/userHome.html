@@ -4,82 +4,84 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>个人中心-明日方舟</title>
-    <link href="../css/login.css" type="text/css" rel="stylesheet" />
+    <link href="../css/userHome.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
-    <div id="pageHead"><img src="../img/login/login.png"></div>
+    <div id="pageHead">
+        <img id="pageLog" src="../img/login/login.png">
+        <img id="meanuButton" onclick="meanuButton()" src="../img/userHome/meanu.png">
+        <img id="loginOut" onclick="loginOut()" src="../img/informationMore/loginOut.png">
+    </div>
+
+    <span id="pageMeanu">
+        <img id="meanuOut" onclick="meanuOut()" src="../img/userHome/meanuOut.png">
+        <ul id="meanuList">
+            <li id="meanuLi">基本信息</li>
+            <li id="meanuLi">重置密码</li>
+            <li id="meanuLi">礼包兑换</li>
+            <li id="meanuLi">自助查询</li>
+        </ul>
+    </span>
+    
     <div id="pageBody">
-        <span id="login">
-            <form name="signIn" id="signIn" action="../index.html" onsubmit="return loginCheck(this)" method="POST">
-                <b class="loginTitle">登录</b><br>
-                <input type="text" name="account" class="account" id="signInAccountInput" placeholder="请输入手机号和邮箱"><br>
-                <span class="ERRORInformation">
-                    <p id="signInAccount">&nbsp</p>
-                </span><br>
-
-                <span id="signInOfPassword">
-                    <input type="password" name="pwb" class="pwb" id="signInPwbInput" placeholder="请输入密码"><br>
-                    <span class="ERRORInformation">
-                        <p id="signInPwb">&nbsp</p>
-                    </span><br>
-                </span>
-
-                <span id="signInOfVerification">
-                    <input type="text" name="verification" class="verification" placeholder="输入验证码">
-                    <button class="getVerification">获取验证码</button><br>
-                    <span class="ERRORInformation">
-                        <p id="signIpVerification">&nbsp</p>
-                    </span><br>
-                </span>
-
-                <a onclick="signInBy(this)">使用短信验证码登录</a><br>
-                <input type="submit" id="signInSubmit" value="登录">
-            </form>
-            <form name="signUp" id="signUp" action="../index.html" onsubmit="return logUpCheck(this)" method="POST">
-                <b class="loginTitle">注册</b>
-
-                <input type="text" name="account" class="account" id="signUpAccountInput" placeholder="手机号"><br>
-                <span class="ERRORInformation">
-                    <p id="signUpAccount">&nbsp</p>
-                </span><br>
-
-                <input type="password" name="pwb" class="pwb" id="signUpPwbInput" placeholder="8-16位数字、字母、常用字符"><br>
-                <span class="ERRORInformation">
-                    <p id="signUpPwb">&nbsp</p>
-                </span><br>
-
-                <input type="password" name="repwb" class="pwb" id="signUpRepwbInput" placeholder="确认密码"><br>
-                <span class="ERRORInformation">
-                    <p id="signUpRepwb">&nbsp</p>
-                </span><br>
-
-                <input type="text" name="verification" class="verification" id="signUpVerificationInput"
-                    placeholder="输入验证码">
-                <button class="getVerification">获取验证码</button><br>
-                <span class="ERRORInformation">
-                    <p id="signUpVerification">&nbsp</p>
-                </span><br>
-
-                <input type="checkbox" name="article" class="articlesBox" id="articleBox1"> <label for="article"
-                    class="articles">已阅读并同意<b id="article1">《鹰角网络用户注册协议书》</b></label>
-                <span class="ERRORInformation">
-                    <p id="signUpArticle">&nbsp</p>
-                </span><br>
-                <input type="submit" id="signUpSubmit" value="注册">
-            </form>
+        <span id="nowAccount">当前账号 | 155****7290</span><br>
+        <!-- 账号信息 -->
+        <span id="AccountInformation" class="bigCard">
+            <b id="userAccountInformation" class="bigCardName">账号信息</b><br>
+            <span class="Card">
+                <b class="CardName">绑定手机</b><br>
+                <b class="CardPhone">155****7290</b>
+                <button class="AccountInformationChange">变更</button>
+            </span><br>
+            <span class="Card">
+                <b class="CardName">绑定邮箱</b>
+                <b class="CardEmail">Hyperion_LR@foxmail.com</b>
+                <button class="AccountInformationChange">绑定</button>
+            </span>
         </span>
-        <span id="loginButton">
-            <button id="signInButton" onclick="loginTransition(0)">登录</button>
-            <button id="signUpButton" onclick="loginTransition(1)">注册</button>
+        <!-- 账号角色信息 -->
+        <span id="AccountRoleInformation" class="bigCard">
+            <b id="userAccountRoleInformation" class="bigCardName">账号角色信息</b>
+            <span class="Card">
+                <b class="CardName">角色昵称</b>
+                <b class="cardRole">冰箱的主人LR</b>
+            </span>
+            <span class="Card">
+                <b class="CardName">UID</b>
+                <b class="cardRoleName">2642200721</b>
+            </span>
+        </span>
+        <!-- 实名信息 -->
+        <span id="RealNameInformation" class="bigCard">
+            <b id="userRealNameInformation" class="bigCardName">实名信息</b>
+            <card class="Card">
+                <b class="CardName">实名信息</b>
+                <b class="cardRealName">未实名</b>
+            </card>
+        </span>
+        <!-- 重置密码 -->
+        <span id="SetNewPwb" class="bigCard">
+            <b id="userSetNewPwb" class="bigCardName">重置密码</b>
+            <form class="Card">
+                <b class="CardName">新密码</b>
+                <input id="NewPwb" type="text" placeholder="8-16位数字，字母，常用字符">
+                <b class="CardName">确认密码</b>
+                <input id="reNewPwb" type="text" placeholder="确认密码">
+                <b class="CardName">验证码</b>
+                <input id="verification" type="text" placeholder="输入验证码">
+                <button id="getVerification">获取验证码</button>
+                <input id="submitNewPwb" type="submit" value="确认更改">
+            </form>
         </span>
     </div>
+
     <div id="pageFooter">
         <p> 沪公网安备31010402005145号沪ICP备17022476号-1 沪网文[2018] 0803-067号</p>
         <p>亲的市民朋友，上海警方反许劝阻电话“962110”系专门针对免您财产被骗受损而设，请您一旦收到来电，立即接听。</p>
         <p>Copyright@2017上海鹰角网络科技有限公司上海市嘉定区南翔镇银翔路799号昌辉大厦504-1室电话：021-64399377 客服QQ:800830064</p>
     </div>
-    <script type="text/javascript" src="../js/login.js"></script>
+    <script type="text/javascript" src="../js/userHome.js"></script>
 </body>
 
 </html>
