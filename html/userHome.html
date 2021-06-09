@@ -17,10 +17,10 @@
     <span id="pageMeanu">
         <img id="meanuOut" onclick="meanuOut()" src="../img/userHome/meanuOut.png">
         <ul id="meanuList">
-            <li id="meanuLi">基本信息</li>
-            <li id="meanuLi">重置密码</li>
-            <li id="meanuLi">礼包兑换</li>
-            <li id="meanuLi">自助查询</li>
+            <li id="meanuLi" onclick="toPageCard(1)">基本信息</li>
+            <li id="meanuLi" onclick="toPageCard(2)">重置密码</li>
+            <li id="meanuLi" onclick="toPageCard(3)">礼包兑换</li>
+            <li id="meanuLi" onclick="toPageCard(4)">自助查询</li>
         </ul>
     </span>
     
@@ -73,6 +73,77 @@
                 <button id="getVerification">获取验证码</button>
                 <input id="submitNewPwb" type="submit" value="确认更改">
             </form>
+        </span>
+        <!-- 礼包兑换 -->
+        <span id="redemption" class="bigCard">
+            <b id="userPedemption" class="bigCardName">礼包兑换</b>
+            <form class="Card">
+                <input id="redemptionCode" type="text" placeholder="-A R K N I G H T-">
+                <input id="submitNewPwb" type="submit" value="确认兑换">
+            </form>
+        </span>
+        <span id="RedemptionRecords" class="bigCard">
+            <b id="userPedemption" class="bigCardName">历史兑换记录</b>
+            <b id="userPedemptionInformation">*仅显示最近10条兑换记录</b>
+            <table id="RedemptionRecordTable">
+                <thead id="RedemptionRecordTh">
+                    <th>兑换时间</th>
+                    <th>礼包</th>
+                    <th>使用兑换码</th>
+                </thead>
+                <tbody>
+                    <tr class="RedemptionRecord">
+                        <td class="pedemptionTime">2022-03-07</td>
+                        <td class="pedemptionGift">源石*3</td>
+                        <td class="pedemptionCode">g856mdfy</td>
+                    </tr>
+                    <tr class="RedemptionRecord">
+                        <td class="pedemptionTime">2022-03-07</td>
+                        <td class="pedemptionGift">源石*3</td>
+                        <td class="pedemptionCode">g856mdfy</td>
+                    </tr>
+                    <tr class="RedemptionRecord">
+                        <td class="pedemptionTime">2022-03-07</td>
+                        <td class="pedemptionGift">源石*3</td>
+                        <td class="pedemptionCode">g856mdfy</td>
+                    </tr>
+                    <tr class="RedemptionRecord">
+                        <td class="pedemptionTime">2022-03-07</td>
+                        <td class="pedemptionGift">源石*3</td>
+                        <td class="pedemptionCode">g856mdfy</td>
+                    </tr>
+                    <tr class="RedemptionRecord">
+                        <td class="pedemptionTime">2022-03-07</td>
+                        <td class="pedemptionGift">源石*3</td>
+                        <td class="pedemptionCode">g856mdfy</td>
+                    </tr>
+                    <tr class="RedemptionRecord">
+                        <td class="pedemptionTime">2022-03-07</td>
+                        <td class="pedemptionGift">源石*3</td>
+                        <td class="pedemptionCode">g856mdfy</td>
+                    </tr>
+                    <tr class="RedemptionRecord">
+                        <td class="pedemptionTime">2022-03-07</td>
+                        <td class="pedemptionGift">源石*3</td>
+                        <td class="pedemptionCode">g856mdfy</td>
+                    </tr>
+                    <tr class="RedemptionRecord">
+                        <td class="pedemptionTime">2022-03-07</td>
+                        <td class="pedemptionGift">源石*3</td>
+                        <td class="pedemptionCode">g856mdfy</td>
+                    </tr>
+                    <tr class="RedemptionRecord">
+                        <td class="pedemptionTime">2022-03-07</td>
+                        <td class="pedemptionGift">源石*3</td>
+                        <td class="pedemptionCode">g856mdfy</td>
+                    </tr>
+                    <tr class="RedemptionRecord">
+                        <td class="pedemptionTime">2022-03-07</td>
+                        <td class="pedemptionGift">源石*3</td>
+                        <td class="pedemptionCode">g856mdfy</td>
+                    </tr>
+                </tbody>
+            </table>
         </span>
     </div>
 
