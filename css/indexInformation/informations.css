@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 0;
+}
+
+body {
+    background: url("../../img/index/background.jpg") no-repeat fixed;
+    background-size: 100vw 100vh;
+}
+
+#informationType{
+    font-size: 24px;
+    color: #158fc5;
+}
+
+#page{
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+.pageP{
+    font-size: 16px;
+    color: #fff;
+    padding: 2vh 0;
+    line-height: 24px;
+}
+
+.pageLi{
+    font-size: 16px;
+    color: #fff;
+    padding: 2vh 0;
+    line-height: 24px;
+}
+
+b{
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+
+
+/* 页脚 */
+#footer {
+    font: normal normal 14px "SansRegular";
+    color: #fff;
+    height: 40vh;
+    background-color: #141516;
+}
+hr{
+    border:none;
+    border-top:1px solid #505050;
+}
+#friend {
+    text-align: center;
+    margin-top: 30px;
+}
+.friend{
+    text-align: center;
+}
+
+.friendLi{
+    display: inline-block;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+}
+
+.friendLi a{
+    display: inline-block;
+    font: normal normal 14px "SansRegular";
+    color: #fff;
+    line-height: 24px;
+    text-decoration: none;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#footerInforMation{
+    display: block;
+    height: 12vh;
+    width: 32vw;
+    margin: auto;
+    overflow: hidden;
+}
+
+.footerInforMationLi{
+    float: left;
+    font: normal normal 12px "SansRegular";
+    color: #979797;
+    line-height: 12px;
+    width: 15vw;
+    text-align: center;
+    padding: 5px;
+}
+
+#footerPromptInforMation{
+    font: normal normal 12px "SansRegular";
+    color: #979797;
+    text-align: center;
+    position: relative;
+    top: -4vh;
+}
+
+#footImgLog{
+    height: 12vh;
+    position: absolute;
+}
+
+#footImgAge{
+    height: 12vh;
+    position: absolute;
+    left: 20vw;
+}
+
+#footMessage{
+    padding-top: 2vh;
+}
+
+#footMessage p{
+    font: normal normal 12px "SansRegular";
+    color: #979797;
+    line-height: 24px;
+    text-align: center;
+}
