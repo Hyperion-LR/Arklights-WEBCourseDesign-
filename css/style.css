@@ -29,6 +29,11 @@ a:hover {
     cursor: url("../img/index/cursor-inner.1d69419cb78ed4579ad9.png") 3 3, default;
 }
 
+a:visited{
+    color: #fff;
+    text-decoration: none;
+}
+
 .page{
     overflow: hidden;
     height: 100vh;
