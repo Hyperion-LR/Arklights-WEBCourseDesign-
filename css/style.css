@@ -25,6 +25,11 @@ body {
     cursor: url("../img/index/cursor-inner.1d69419cb78ed4579ad9.png") 3 3, default;
 }
 
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
 a:hover {
     cursor: url("../img/index/cursor-inner.1d69419cb78ed4579ad9.png") 3 3, default;
 }
@@ -966,9 +971,6 @@ hr{
     text-align: center;
     margin-top: 30px;
 }
-.friend{
-    text-align: center;
-}
 
 .friendLi{
     display: inline-block;
@@ -978,7 +980,7 @@ hr{
 
 .friendLi a{
     display: inline-block;
-    font: normal normal 14px "SansRegular";
+    font-size: 14px;
     color: #fff;
     line-height: 24px;
     text-decoration: none;

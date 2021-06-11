@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="zh-CH">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>冰箱主人的个人简历</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-size: 0;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            user-select: none;
+            font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+        }
+        body{
+            background: url("../img/about/index.png") fixed no-repeat;
+            background-size: 100%;
+            height: 100vh;
+            text-align: center;
+        }
+        #contet{
+            display: inline-block;
+            height: 480px;
+            width: 800px;
+            box-shadow: 0 4px 12px -2px rgb(9 2 4 / 80%);
+            margin: auto;
+            max-width: 100vw;
+            max-height: 100vh;
+            position: relative;
+            top: 50vh;
+            margin-top: -240px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        #contet::after{
+            content: "";
+            display: block;
+            height: 100vh;
+            width: 100vw;
+            background: url("../img/about/index.png") fixed no-repeat;
+            background-size: 100%; 
+            filter: blur(2px);
+            position: relative;
+            z-index: 1;
+        }
+        #left{
+            height: 100%;
+            width: 30%;
+            float: left;
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            position: relative;
+            z-index: 3;
+        }
+        #avatarImg{
+            display: inline-block;
+            height: 100px;
+            right: 100px;
+            border-radius: 5px;
+            margin-top: 42px;
+        }
+        #avatar{
+            font-size: 18px;
+            line-height: 48px;
+            font-family: "Times New Roman", Times, serif;
+
+        }
+        #information{
+            display: inline-block;
+            width: 100%;
+            padding: 10px;
+        }
+        #Introduction{
+            display: inline-block;
+            width: 100%;
+        }
+        .Item{
+            display: inline-block;
+            font-size: 12px;
+            line-height: 24px;
+            font-weight: bold;
+            text-align: left;
+            width: 100%;
+        }
+        .BasicItem{
+            font-size: 12px;
+            line-height: 24px;
+            text-align: left;
+            padding-left: 12px;
+        }
+        .SkillItem{
+            display: inline-block;
+            font-size: 12px;
+            line-height: 24px;
+            text-align: left;
+            padding-left: 2px;
+        }
+        .Selfitem{
+            font-size: 12px;
+            line-height: 24px;
+            text-align: left;
+            padding-left: 12px;
+        }
+        #right{
+            height: 100%;
+            width: 69%;
+            float: right;
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            z-index: 3;
+        }
+        #CourseDesign{
+            float: left;
+            height: 280px;
+            width: 250px;
+            border-radius: 5px;
+            margin: 10px;
+            margin-top: 14px;
+            background: url("../img/about/42.jpg") no-repeat;
+            background-size: 100%;
+            transition: all 300ms;
+            overflow: hidden;
+            transform-origin: left top;
+        }
+        #CourseDesign:hover{
+            transform: scale(1.05);
+            box-shadow: 0 2px 12px -2px rgb(9 2 4 / 80%);
+        }
+        #Blog{
+            float: right;
+            height: 140px;
+            width: 250px;
+            border-radius: 5px;
+            margin: 10px;
+            margin-top: 14px;
+            transition: all 300ms;
+            background: url("../img/about/MyBlog.png") no-repeat;
+            background-size: auto 100%;
+            overflow: hidden;
+            transform-origin: right top;
+        }
+        #Blog:hover{
+            transform: scale(1.05);
+            box-shadow: 0 2px 12px -2px rgb(9 2 4 / 80%);
+        }
+        #Rubbish{
+            float: right;
+            height: 120px;
+            width: 250px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            margin: 10px;
+            transition: all 300ms;
+            overflow: hidden;
+            transform-origin: right;
+        }
+        #Rubbish:hover{
+            transform: scale(1.05);
+            box-shadow: 0 2px 12px -2px rgb(9 2 4 / 80%);
+        }
+        #Useful{
+            float: left;
+            height: 140px;
+            width: 380px;
+            background: url("../img/about/userFul.png") no-repeat;
+            background-size: 100%;
+            border-radius: 5px;
+            margin: 10px;
+            transition: all 300ms;
+            overflow: hidden;
+            transform-origin: left bottom;
+        }
+        #Useful:hover{
+            transform: scale(1.05);
+            box-shadow: 0 2px 12px -2px rgb(9 2 4 / 80%);
+        }
+        #FindMe{
+            float: right;
+            height: 140px;
+            width: 120px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            margin: 10px;
+            transition: all 300ms;
+            background: url("../img/about/findMe.jpg") no-repeat;
+            background-size: 100% auto;
+            overflow: hidden;
+            transform-origin: right bottom;
+        }
+        #FindMe:hover{
+            transform: scale(1.05);
+            box-shadow: 0 2px 12px -2px rgb(9 2 4 / 80%);
+        }
+        .itemTitle{
+            float: right;
+            font-size: 12px;
+            color: #fff;
+            padding: 4px;
+            position: relative;
+            top: 100%;
+            margin-top: -24px;
+        }
+        .outCard{
+            font-size: 24px;
+            color: #000;
+            display: inline-block;
+            height: 24px;
+            width: 24px;
+            line-height: 24px;
+            border: 1px solid #000;
+            border-radius: 12px;
+            position: relative;
+            left: 240px;
+            top: 30px;
+            opacity: 0;
+            display: none;
+            transition: all 300ms;
+        }
+        .outCard:hover{
+            color: #fff;
+            border: 1px solid #fff;
+            box-shadow: 0 4px 12px -2px rgb(9 2 4 / 80%);
+        }
+
+        #UsefulTitle{
+            font-size: 32px;
+            line-height: 48px;
+            margin-top: 50px;
+            opacity: 0;
+            display: none;
+            transition: all 300ms;
+        }
+
+        .UsefulOf{
+            display: none;
+            height: 100px;
+            width: 100px;
+            line-height: 100px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            margin: 30px;
+            font-size: 18px;
+            color: #000;
+            text-decoration: none;
+            transition: all 300ms;
+            opacity: 0;
+        }
+
+        .UsefulOf:hover{
+            color: #fff;
+            border: 1px solid #fff;
+            box-shadow: 0 4px 12px -2px rgb(9 2 4 / 80%);
+        }
+
+        #findMeTitle{
+            font-size: 32px;
+            line-height: 48px;
+            margin-top: 50px;
+            opacity: 0;
+            display: none;
+            transition: all 300ms;
+        }
+        .findMeOf{
+            display: none;
+            height: 100px;
+            width: 100px;
+            line-height: 100px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            margin: 30px;
+            font-size: 18px;
+            color: #000;
+            text-decoration: none;
+            transition: all 300ms;
+            opacity: 0;
+        }
+        .findMeOf:hover{
+            color: #fff;
+            border: 1px solid #fff;
+            box-shadow: 0 4px 12px -2px rgb(9 2 4 / 80%);
+        }
+    </style>
+</head>
+
+<body>
+    <span id="contet">
+        <span id="left">
+            <img id="avatarImg" src="../img/about/avatar.png"><br>
+            <b id="avatar">冰箱的主人LR</b>
+            <div id="information">
+                <dl id="Introduction">
+                    <dt id="Basic" class="Item">个人基本信息</dt>
+                        <dd class="BasicItem">生&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日:3月7日</dd>
+                        <dd class="BasicItem">兴趣特长:暂无</dd>
+                        <dd class="BasicItem">在读院校:东华理工大学</dd>
+                        <dd class="BasicItem">专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业:软件工程</dd>
+                    <dt id="Skill" class="Item">掌握技能</dt>
+                        <dd class="SkillItem">数据结构，</dd>
+                        <dd class="SkillItem">算法，</dd>
+                        <dd class="SkillItem">C++/C，</dd>
+                        <dd class="SkillItem">Java，</dd>
+                        <dd class="SkillItem">Python，</dd>
+                        <dd class="SkillItem">数学建模</dd>
+                    <dt id="Self" class="Item">自我总结</dt>
+                        <dd class="Selfitem">我叫李荣，是个废物</dd>
+                </dl>
+            </div>
+        </span>
+        <span id="right">
+            <a id="CourseDesign" href="../index.html" target="_blank"><b class="itemTitle">课程设计</b></a>
+            <a id="Blog" href="https://hyperion-lr.gitee.io/" target="_blank"><b class="itemTitle">Blog</b></a>
+            <span>
+                <span id="Rubbish" onclick="openCard(1)"><b class="itemTitle">没什么用的东西</b></span>
+                <span class="outCard" onclick="returnInformation(1)">X</span>
+            </span>
+            <span>
+                <span id="Useful" onclick="openCard(2)"><b class="itemTitle">有用的网站</b></span>
+                <span class="outCard" onclick="returnInformation(2)">X</span>
+                <h1 id="UsefulTitle">冰箱主人的个人链接</h1>
+                <a class="UsefulOf" href="https://www.linuxcool.com/" target="_blank">Linux命令大全</a>
+                <a class="UsefulOf" href="https://paste.ubuntu.com/" target="_blank">Ubuntu&nbsp;Pastebin</a>
+                <a class="UsefulOf" href="http://www.codeinword.com/" target="_blank">CodeInWord</a>
+                <a class="UsefulOf" href="http://moretrue.cn/Home/Index/index.html" target="_blank">慕楚教育</a>
+                <a class="UsefulOf" href="https://cn.bing.com/translator/" target="_blank">谷歌翻译</a>
+                <a class="UsefulOf" href="https://developer.mozilla.org/zh-CN/docs/Learn" target="_blank">MDN</a>
+            </span>
+            <span>
+                <span id="FindMe" onclick="openCard(3)"><b class="itemTitle">怎么找到我</b></span>
+                <span class="outCard" onclick="returnInformation(3)">X</span>
+                <h1 id="findMeTitle">冰箱主人的个人链接</h1>
+                <a class="findMeOf" id="findMeOfQQ" href="tencent://message/?uin=2642200721&Site=&Menu=yes" target="_blank">QQ</a>
+                <a class="findMeOf" id="findMeOfEmail" href="mailto:Hyperion_LR@foxmail.com" target="_blank">Email</a>
+                <a class="findMeOf" id="findMeOfBlog" href="https://hyperion-lr.gitee.io/" target="_blank">Blog</a>
+                <a class="findMeOf" id="findMeOfBiliBili" href="https://space.bilibili.com/297987258" target="_blank">BiliBili</a>
+                <a class="findMeOf" id="findMeOfCodeforces" href="https://codeforces.com/profile/Hyperion_LR" target="_blank">Codeforces</a>
+                <a class="findMeOf" id="findMeOfNC" href="https://ac.nowcoder.com/acm/contest/profile/460788138" target="_blank">牛客</a>
+            </span>
+        </span>
+    </span>
+    <script type="text/javascript">
+        var CourseDesign = document.getElementById("CourseDesign");
+        var Blog = document.getElementById("Blog");
+        var Rubbish = document.getElementById("Rubbish");
+        var Useful = document.getElementById("Useful");
+        var FindMe = document.getElementById("FindMe");
+        var outCard = document.getElementsByClassName("outCard");
+        var findMeOf = document.getElementsByClassName("findMeOf");
+        var findMeTitle = document.getElementById("findMeTitle");
+        var UsefulOf = document.getElementsByClassName("UsefulOf");
+        var UsefulTitle = document.getElementById("UsefulTitle");
+        function openCard(index){
+            CourseDesign.style.height = "0px";
+            CourseDesign.style.width = "0px";
+            Blog.style.height = "0px";
+            Blog.style.width = "0px";
+            Rubbish.style.height = "0px";
+            Rubbish.style.width = "0px";
+            Useful.style.height = "0px";
+            Useful.style.width = "0px";
+            FindMe.style.height = "0px";
+            FindMe.style.width = "0px";
+            CourseDesign.style.margin = "0";
+            Blog.style.margin = "0";
+            Useful.style.margin = "0";
+            Rubbish.style.margin = "0";
+            FindMe.style.margin = "0";
+            CourseDesign.style.opacity = "0";
+            Blog.style.opacity = "0";
+            Useful.style.opacity = "0";
+            Rubbish.style.opacity = "0";
+            FindMe.style.opacity = "0";
+            setTimeout(()=>{
+                CourseDesign.style.display = "none";
+                Blog.style.display = "none";
+                Useful.style.display = "none";
+                Rubbish.style.display = "none";
+                FindMe.style.display = "none";
+            } ,600);
+            if(index == 1){
+                Rubbish.style.height = "100%";
+                Rubbish.style.width = "100%";
+                outCard[0].style.opacity = "1";
+                outCard[0].style.display = "inline-block";
+            }else if(index == 2){
+                Useful.style.height = "100%";
+                Useful.style.width = "100%";
+                setTimeout(()=>{
+                    UsefulTitle.style.display = "block";
+                    UsefulTitle.style.opacity = "1";
+                    outCard[1].style.display = "inline-block";
+                    outCard[1].style.opacity = "1";
+                    for(var i = 0; i < findMeOf.length; ++i){
+                        UsefulOf[i].style.display = "inline-block";
+                        UsefulOf[i].style.opacity = "1";
+                    }                    
+                }, 600);
+            }else if(index == 3){
+                FindMe.style.height = "100%";
+                FindMe.style.width = "100%";
+                setTimeout(()=>{
+                    findMeTitle.style.opacity = "1";
+                    findMeTitle.style.display = "block";
+                    outCard[2].style.display = "inline-block";
+                    outCard[2].style.opacity = "1";
+                    for(var i = 0; i < findMeOf.length; ++i){
+                        findMeOf[i].style.display = "inline-block";
+                        findMeOf[i].style.opacity = "1";
+                    }                    
+                }, 600);
+            }
+        }
+
+        function returnInformation(index){
+            CourseDesign.style.display = "block";
+            Blog.style.display = "block";
+            Useful.style.display = "block";
+            Rubbish.style.display = "block";
+            FindMe.style.display = "block";
+            CourseDesign.style.opacity = "1";
+            Blog.style.opacity = "0";
+            Useful.style.opacity = "0";
+            Rubbish.style.opacity = "0";
+            FindMe.style.opacity = "0";
+            if(index == 1){
+                outCard[0].style.opacity = "0";
+                outCard[0].style.display = "none";
+
+            }else if(index == 2){
+                outCard[1].style.opacity = "0";
+                UsefulTitle.style.opacity = "0";
+                for(var i = 0; i < findMeOf.length; ++i){
+                    UsefulOf[i].style.opacity = "0";
+                    UsefulOf[i].style.display = "none";
+                }
+                setTimeout(()=>{
+                    outCard[1].style.display = "none"; 
+                    UsefulTitle.style.display = "none";                   
+                }, 300);
+
+            }else if(index == 3){
+                outCard[2].style.opacity = "0";
+                findMeTitle.style.opacity = "0";
+                for(var i = 0; i < findMeOf.length; ++i){
+                    findMeOf[i].style.opacity = "0";
+                    findMeOf[i].style.display = "none";
+                }
+                setTimeout(()=>{
+                    outCard[2].style.display = "none"; 
+                    findMeTitle.style.display = "none";                   
+                }, 300);
+
+            }
+            setTimeout(()=>{
+                CourseDesign.style.opacity = "1";
+                Blog.style.opacity = "1";
+                Useful.style.opacity = "1";
+                Rubbish.style.opacity = "1";
+                FindMe.style.opacity = "1";   
+                CourseDesign.style.height = "280px";
+                CourseDesign.style.width = "250px";
+                Blog.style.height = "140px";
+                Blog.style.width = "250px";
+                Rubbish.style.height = "120px";
+                Rubbish.style.width = "250px";
+                Useful.style.height = "140px";
+                Useful.style.width = "380px";
+                FindMe.style.height = "140px";
+                FindMe.style.width = "120px";
+                CourseDesign.style.margin = "10px";
+                Blog.style.margin = "10px";
+                Useful.style.margin = "10px";
+                Rubbish.style.margin = "10px";
+                FindMe.style.margin = "10px";                             
+            }, 300);
+        }
+    </script>
+</body>
+
+</html>
