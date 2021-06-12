@@ -539,7 +539,6 @@ function nextWorldList(){
 // 我也不知道为啥要加这句，但是不加的话导航栏会出BUG
 worldImg.style.display = "none";
 
-
 // 档案页面
 var nowMediaListLi = 0;
 var mediaListLi = document.getElementsByClassName("mediaListLi");
@@ -633,3 +632,14 @@ function lastMediaLi(){
 function nextMediaLi(){
     ToMediaListLi((nowMediaListLi + 1) % 18);
 }
+
+//media页面鼠标跟踪
+var mediaImg = document.getElementById("mediaImg");
+var mediaInformation = document.getElementsByClassName("mediaInformation");
+var mediaListLis = document.getElementById("mediaListLis");
+var mediaList = document.getElementById("mediaList");
+document.addEventListener('mousemove', function(e) {
+    e = e || window.event;
+    mediaList.style.transform = "translate3d("+(e.screenX - 768)/10+"px, "+(e.screenY - 381)/10+"px, "+-1000+"px) rotateX("+(-e.screenY + 560)/42+"deg) rotateY("+(e.screenX - 768)/42+"deg)";
+    mediaInformation[nowMediaListLi].style.transform = "translate3d("+(e.screenX - 768)/10+"px, "+(e.screenY - 381)/10+"px, "+1000+"px) rotateX("+(-e.screenY + 560)/42+"deg) rotateY("+(e.screenX - 768)/42+"deg)";
+});

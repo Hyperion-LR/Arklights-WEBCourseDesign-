@@ -5,22 +5,24 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>冰箱主人的个人简历</title>
     <style>
-        *{
+        * {
             padding: 0;
             margin: 0;
             font-size: 0;
             overflow-x: hidden;
             overflow-y: hidden;
             user-select: none;
-            font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+            font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
         }
-        body{
+
+        body {
             background: url("../img/about/index.png") fixed no-repeat;
             background-size: 100%;
             height: 100vh;
             text-align: center;
         }
-        #contet{
+
+        #contet {
             display: inline-block;
             height: 480px;
             width: 800px;
@@ -34,18 +36,20 @@
             border-radius: 5px;
             overflow: hidden;
         }
-        #contet::after{
+
+        #contet::after {
             content: "";
             display: block;
             height: 100vh;
             width: 100vw;
             background: url("../img/about/index.png") fixed no-repeat;
-            background-size: 100%; 
+            background-size: 100%;
             filter: blur(2px);
             position: relative;
             z-index: 1;
         }
-        #left{
+
+        #left {
             height: 100%;
             width: 30%;
             float: left;
@@ -54,29 +58,34 @@
             position: relative;
             z-index: 3;
         }
-        #avatarImg{
+
+        #avatarImg {
             display: inline-block;
             height: 100px;
             right: 100px;
             border-radius: 5px;
             margin-top: 42px;
         }
-        #avatar{
+
+        #avatar {
             font-size: 18px;
             line-height: 48px;
             font-family: "Times New Roman", Times, serif;
 
         }
-        #information{
+
+        #information {
             display: inline-block;
             width: 100%;
             padding: 10px;
         }
-        #Introduction{
+
+        #Introduction {
             display: inline-block;
             width: 100%;
         }
-        .Item{
+
+        .Item {
             display: inline-block;
             font-size: 12px;
             line-height: 24px;
@@ -84,26 +93,30 @@
             text-align: left;
             width: 100%;
         }
-        .BasicItem{
+
+        .BasicItem {
             font-size: 12px;
             line-height: 24px;
             text-align: left;
             padding-left: 12px;
         }
-        .SkillItem{
+
+        .SkillItem {
             display: inline-block;
             font-size: 12px;
             line-height: 24px;
             text-align: left;
             padding-left: 2px;
         }
-        .Selfitem{
+
+        .Selfitem {
             font-size: 12px;
             line-height: 24px;
             text-align: left;
             padding-left: 12px;
         }
-        #right{
+
+        #right {
             height: 100%;
             width: 69%;
             float: right;
@@ -111,7 +124,8 @@
             position: relative;
             z-index: 3;
         }
-        #CourseDesign{
+
+        #CourseDesign {
             float: left;
             height: 280px;
             width: 250px;
@@ -120,47 +134,54 @@
             margin-top: 14px;
             background: url("../img/about/42.jpg") no-repeat;
             background-size: 100%;
-            transition: all 300ms;
+            transition: all 600ms;
             overflow: hidden;
             transform-origin: left top;
         }
-        #CourseDesign:hover{
+
+        #CourseDesign:hover {
             transform: scale(1.05);
             box-shadow: 0 2px 12px -2px rgb(9 2 4 / 80%);
         }
-        #Blog{
+
+        #Blog {
             float: right;
             height: 140px;
             width: 250px;
             border-radius: 5px;
             margin: 10px;
             margin-top: 14px;
-            transition: all 300ms;
+            transition: all 600ms;
             background: url("../img/about/MyBlog.png") no-repeat;
             background-size: auto 100%;
             overflow: hidden;
             transform-origin: right top;
         }
-        #Blog:hover{
+
+        #Blog:hover {
             transform: scale(1.05);
             box-shadow: 0 2px 12px -2px rgb(9 2 4 / 80%);
         }
-        #Rubbish{
+
+        #Rubbish {
             float: right;
             height: 120px;
             width: 250px;
-            border: 1px solid #fff;
+            background: url("../img/about/Rubbish.jpg") no-repeat;
+            background-size: 100%;
             border-radius: 5px;
             margin: 10px;
-            transition: all 300ms;
+            transition: all 600ms;
             overflow: hidden;
             transform-origin: right;
         }
-        #Rubbish:hover{
+
+        #Rubbish:hover {
             transform: scale(1.05);
             box-shadow: 0 2px 12px -2px rgb(9 2 4 / 80%);
         }
-        #Useful{
+
+        #Useful {
             float: left;
             height: 140px;
             width: 380px;
@@ -168,32 +189,36 @@
             background-size: 100%;
             border-radius: 5px;
             margin: 10px;
-            transition: all 300ms;
+            transition: all 600ms;
             overflow: hidden;
             transform-origin: left bottom;
         }
-        #Useful:hover{
+
+        #Useful:hover {
             transform: scale(1.05);
             box-shadow: 0 2px 12px -2px rgb(9 2 4 / 80%);
         }
-        #FindMe{
+
+        #FindMe {
             float: right;
             height: 140px;
             width: 120px;
             border: 1px solid #fff;
             border-radius: 5px;
             margin: 10px;
-            transition: all 300ms;
+            transition: all 600ms;
             background: url("../img/about/findMe.jpg") no-repeat;
             background-size: 100% auto;
             overflow: hidden;
             transform-origin: right bottom;
         }
-        #FindMe:hover{
+
+        #FindMe:hover {
             transform: scale(1.05);
             box-shadow: 0 2px 12px -2px rgb(9 2 4 / 80%);
         }
-        .itemTitle{
+
+        .itemTitle {
             float: right;
             font-size: 12px;
             color: #fff;
@@ -202,7 +227,8 @@
             top: 100%;
             margin-top: -24px;
         }
-        .outCard{
+
+        .outCard {
             font-size: 24px;
             color: #000;
             display: inline-block;
@@ -218,13 +244,14 @@
             display: none;
             transition: all 300ms;
         }
-        .outCard:hover{
+
+        .outCard:hover {
             color: #fff;
             border: 1px solid #fff;
             box-shadow: 0 4px 12px -2px rgb(9 2 4 / 80%);
         }
 
-        #UsefulTitle{
+        #UsefulTitle {
             font-size: 32px;
             line-height: 48px;
             margin-top: 50px;
@@ -233,7 +260,7 @@
             transition: all 300ms;
         }
 
-        .UsefulOf{
+        .UsefulOf {
             display: none;
             height: 100px;
             width: 100px;
@@ -248,13 +275,13 @@
             opacity: 0;
         }
 
-        .UsefulOf:hover{
+        .UsefulOf:hover {
             color: #fff;
             border: 1px solid #fff;
             box-shadow: 0 4px 12px -2px rgb(9 2 4 / 80%);
         }
 
-        #findMeTitle{
+        #findMeTitle {
             font-size: 32px;
             line-height: 48px;
             margin-top: 50px;
@@ -262,7 +289,8 @@
             display: none;
             transition: all 300ms;
         }
-        .findMeOf{
+
+        .findMeOf {
             display: none;
             height: 100px;
             width: 100px;
@@ -276,10 +304,20 @@
             transition: all 300ms;
             opacity: 0;
         }
-        .findMeOf:hover{
+
+        .findMeOf:hover {
             color: #fff;
             border: 1px solid #fff;
             box-shadow: 0 4px 12px -2px rgb(9 2 4 / 80%);
+        }
+
+        .notFind {
+            display: none;
+            height: 300px;
+            width: 100%;
+            padding: 50px;
+            font-size: 48px;
+            line-height: 200px;
         }
     </style>
 </head>
@@ -292,19 +330,19 @@
             <div id="information">
                 <dl id="Introduction">
                     <dt id="Basic" class="Item">个人基本信息</dt>
-                        <dd class="BasicItem">生&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日:3月7日</dd>
-                        <dd class="BasicItem">兴趣特长:暂无</dd>
-                        <dd class="BasicItem">在读院校:东华理工大学</dd>
-                        <dd class="BasicItem">专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业:软件工程</dd>
+                    <dd class="BasicItem">生&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日:3月7日</dd>
+                    <dd class="BasicItem">兴趣特长:暂无</dd>
+                    <dd class="BasicItem">在读院校:东华理工大学</dd>
+                    <dd class="BasicItem">专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业:软件工程</dd>
                     <dt id="Skill" class="Item">掌握技能</dt>
-                        <dd class="SkillItem">数据结构，</dd>
-                        <dd class="SkillItem">算法，</dd>
-                        <dd class="SkillItem">C++/C，</dd>
-                        <dd class="SkillItem">Java，</dd>
-                        <dd class="SkillItem">Python，</dd>
-                        <dd class="SkillItem">数学建模</dd>
+                    <dd class="SkillItem">数据结构，</dd>
+                    <dd class="SkillItem">算法，</dd>
+                    <dd class="SkillItem">C++/C，</dd>
+                    <dd class="SkillItem">Java，</dd>
+                    <dd class="SkillItem">Python，</dd>
+                    <dd class="SkillItem">数学建模</dd>
                     <dt id="Self" class="Item">自我总结</dt>
-                        <dd class="Selfitem">我叫李荣，是个废物</dd>
+                    <dd class="Selfitem">我叫李荣，是个废物</dd>
                 </dl>
             </div>
         </span>
@@ -314,6 +352,7 @@
             <span>
                 <span id="Rubbish" onclick="openCard(1)"><b class="itemTitle">没什么用的东西</b></span>
                 <span class="outCard" onclick="returnInformation(1)">X</span>
+                <b class="notFind">内容待完善。。。</b>
             </span>
             <span>
                 <span id="Useful" onclick="openCard(2)"><b class="itemTitle">有用的网站</b></span>
@@ -330,15 +369,37 @@
                 <span id="FindMe" onclick="openCard(3)"><b class="itemTitle">怎么找到我</b></span>
                 <span class="outCard" onclick="returnInformation(3)">X</span>
                 <h1 id="findMeTitle">冰箱主人的个人链接</h1>
-                <a class="findMeOf" id="findMeOfQQ" href="tencent://message/?uin=2642200721&Site=&Menu=yes" target="_blank">QQ</a>
+                <a class="findMeOf" id="findMeOfQQ" href="tencent://message/?uin=2642200721&Site=&Menu=yes"
+                    target="_blank">QQ</a>
                 <a class="findMeOf" id="findMeOfEmail" href="mailto:Hyperion_LR@foxmail.com" target="_blank">Email</a>
                 <a class="findMeOf" id="findMeOfBlog" href="https://hyperion-lr.gitee.io/" target="_blank">Blog</a>
-                <a class="findMeOf" id="findMeOfBiliBili" href="https://space.bilibili.com/297987258" target="_blank">BiliBili</a>
-                <a class="findMeOf" id="findMeOfCodeforces" href="https://codeforces.com/profile/Hyperion_LR" target="_blank">Codeforces</a>
-                <a class="findMeOf" id="findMeOfNC" href="https://ac.nowcoder.com/acm/contest/profile/460788138" target="_blank">牛客</a>
+                <a class="findMeOf" id="findMeOfBiliBili" href="https://space.bilibili.com/297987258"
+                    target="_blank">BiliBili</a>
+                <a class="findMeOf" id="findMeOfCodeforces" href="https://codeforces.com/profile/Hyperion_LR"
+                    target="_blank">Codeforces</a>
+                <a class="findMeOf" id="findMeOfNC" href="https://ac.nowcoder.com/acm/contest/profile/460788138"
+                    target="_blank">牛客</a>
             </span>
         </span>
     </span>
+    <div id="landlord">
+        <div class="message" style="opacity:0"></div>
+        <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+        <div class="hide-button">隐藏</div>
+    </div>
+    <footer></footer>
+
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        var message_Path = 'live2d/'
+        var home_Path = 'https://haremu.com/'
+    </script>
+    <script type="text/javascript" src="live2d/js/live2d.js"></script>
+    <script type="text/javascript" src="live2d/js/message.js"></script>
+    <script type="text/javascript">
+        //调用live2d引擎，载入模型数据json
+        loadlive2d("live2d", "live2d/model/tia/model.json");
+    </script>
     <script type="text/javascript">
         var CourseDesign = document.getElementById("CourseDesign");
         var Blog = document.getElementById("Blog");
@@ -350,7 +411,9 @@
         var findMeTitle = document.getElementById("findMeTitle");
         var UsefulOf = document.getElementsByClassName("UsefulOf");
         var UsefulTitle = document.getElementById("UsefulTitle");
-        function openCard(index){
+        var notFind = document.getElementsByClassName("notFind");
+
+        function openCard(index) {
             CourseDesign.style.height = "0px";
             CourseDesign.style.width = "0px";
             Blog.style.height = "0px";
@@ -371,48 +434,53 @@
             Useful.style.opacity = "0";
             Rubbish.style.opacity = "0";
             FindMe.style.opacity = "0";
-            setTimeout(()=>{
+            setTimeout(() => {
                 CourseDesign.style.display = "none";
                 Blog.style.display = "none";
                 Useful.style.display = "none";
                 Rubbish.style.display = "none";
                 FindMe.style.display = "none";
-            } ,600);
-            if(index == 1){
+            }, 600);
+            if (index == 1) {
                 Rubbish.style.height = "100%";
                 Rubbish.style.width = "100%";
-                outCard[0].style.opacity = "1";
-                outCard[0].style.display = "inline-block";
-            }else if(index == 2){
+
+                setTimeout(() => {
+                    outCard[0].style.opacity = "1";
+                    outCard[0].style.display = "inline-block";
+                    notFind[0].style.display = "inline-block";
+                }, 600);
+
+            } else if (index == 2) {
                 Useful.style.height = "100%";
                 Useful.style.width = "100%";
-                setTimeout(()=>{
+                setTimeout(() => {
                     UsefulTitle.style.display = "block";
                     UsefulTitle.style.opacity = "1";
                     outCard[1].style.display = "inline-block";
                     outCard[1].style.opacity = "1";
-                    for(var i = 0; i < findMeOf.length; ++i){
+                    for (var i = 0; i < findMeOf.length; ++i) {
                         UsefulOf[i].style.display = "inline-block";
                         UsefulOf[i].style.opacity = "1";
-                    }                    
+                    }
                 }, 600);
-            }else if(index == 3){
+            } else if (index == 3) {
                 FindMe.style.height = "100%";
                 FindMe.style.width = "100%";
-                setTimeout(()=>{
+                setTimeout(() => {
                     findMeTitle.style.opacity = "1";
                     findMeTitle.style.display = "block";
                     outCard[2].style.display = "inline-block";
                     outCard[2].style.opacity = "1";
-                    for(var i = 0; i < findMeOf.length; ++i){
+                    for (var i = 0; i < findMeOf.length; ++i) {
                         findMeOf[i].style.display = "inline-block";
                         findMeOf[i].style.opacity = "1";
-                    }                    
+                    }
                 }, 600);
             }
         }
 
-        function returnInformation(index){
+        function returnInformation(index) {
             CourseDesign.style.display = "block";
             Blog.style.display = "block";
             Useful.style.display = "block";
@@ -423,41 +491,41 @@
             Useful.style.opacity = "0";
             Rubbish.style.opacity = "0";
             FindMe.style.opacity = "0";
-            if(index == 1){
+            if (index == 1) {
                 outCard[0].style.opacity = "0";
                 outCard[0].style.display = "none";
-
-            }else if(index == 2){
+                notFind[0].style.display = "none";
+            } else if (index == 2) {
                 outCard[1].style.opacity = "0";
                 UsefulTitle.style.opacity = "0";
-                for(var i = 0; i < findMeOf.length; ++i){
+                for (var i = 0; i < findMeOf.length; ++i) {
                     UsefulOf[i].style.opacity = "0";
                     UsefulOf[i].style.display = "none";
                 }
-                setTimeout(()=>{
-                    outCard[1].style.display = "none"; 
-                    UsefulTitle.style.display = "none";                   
+                setTimeout(() => {
+                    outCard[1].style.display = "none";
+                    UsefulTitle.style.display = "none";
                 }, 300);
 
-            }else if(index == 3){
+            } else if (index == 3) {
                 outCard[2].style.opacity = "0";
                 findMeTitle.style.opacity = "0";
-                for(var i = 0; i < findMeOf.length; ++i){
+                for (var i = 0; i < findMeOf.length; ++i) {
                     findMeOf[i].style.opacity = "0";
                     findMeOf[i].style.display = "none";
                 }
-                setTimeout(()=>{
-                    outCard[2].style.display = "none"; 
-                    findMeTitle.style.display = "none";                   
+                setTimeout(() => {
+                    outCard[2].style.display = "none";
+                    findMeTitle.style.display = "none";
                 }, 300);
 
             }
-            setTimeout(()=>{
+            setTimeout(() => {
                 CourseDesign.style.opacity = "1";
                 Blog.style.opacity = "1";
                 Useful.style.opacity = "1";
                 Rubbish.style.opacity = "1";
-                FindMe.style.opacity = "1";   
+                FindMe.style.opacity = "1";
                 CourseDesign.style.height = "280px";
                 CourseDesign.style.width = "250px";
                 Blog.style.height = "140px";
@@ -472,7 +540,7 @@
                 Blog.style.margin = "10px";
                 Useful.style.margin = "10px";
                 Rubbish.style.margin = "10px";
-                FindMe.style.margin = "10px";                             
+                FindMe.style.margin = "10px";
             }, 300);
         }
     </script>
