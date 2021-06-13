@@ -39,6 +39,7 @@
 #### 安装教程
 
 导入本地后直接点击index.html。GitHub Page:[一个速度比较慢的示例](https://hyperion-lr.github.io/Arklights-WEBCourseDesign-/)
+请在电脑上打开，手机会直接崩掉。
 
 #### 使用说明
 
