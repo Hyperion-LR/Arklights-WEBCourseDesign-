@@ -121,25 +121,25 @@ function logUpCheck() {
         } else if (pwb.value.length < 8 || pwb.value.length > 16) {
             signUpAccount.innerHTML = "&nbsp";
             signUpPwb.innerHTML = "*密码格式错误";
-            signInAccountInput.style.backgroundColor = "rgba(255, 255, 255, 0)"
-            signUpPwbInput.style.backgroundColor = "#ffdcdb"
+            signInAccountInput.style.backgroundColor = "rgba(255, 255, 255, 0)";
+            signUpPwbInput.style.backgroundColor = "#ffdcdb";
             pwb.focus();
             res = false;
         } else if (repwb.value.length == 0) {
             signUpAccount.innerHTML = "&nbsp";
             signUpPwb.innerHTML = "&nbsp";
             signUpRepwb.innerHTML = "*请确认密码";
-            signUpRepwbInput.style.backgroundColor = "rgba(255, 255, 255, 0)"
-            signUpPwbInput.style.backgroundColor = "rgba(255, 255, 255, 0)"
-            signInPwbInput.style.backgroundColor = "#ffdcdb"
+            signUpRepwbInput.style.backgroundColor = "rgba(255, 255, 255, 0)";
+            signUpPwbInput.style.backgroundColor = "rgba(255, 255, 255, 0)";
+            signInPwbInput.style.backgroundColor = "#ffdcdb";
             repwb.focus();
             res = false;
         } else if (pwb.value != repwb.value) {
             signUpAccount.innerHTML = "&nbsp";
             signUpPwb.innerHTML = "&nbsp";
             signUpRepwb.innerHTML = "*密码不一致";
-            signUpRepwbInput.style.backgroundColor = "rgba(255, 255, 255, 0)"
-            signUpPwbInput.style.backgroundColor = "rgba(255, 255, 255, 0)"
+            signUpRepwbInput.style.backgroundColor = "rgba(255, 255, 255, 0)";
+            signUpPwbInput.style.backgroundColor = "rgba(255, 255, 255, 0)";
             signUpRepwbInput.style.backgroundColor = "#ffdcdb";
             repwb.focus();
             res = false;
@@ -148,8 +148,8 @@ function logUpCheck() {
             signUpPwb.innerHTML = "&nbsp";
             signUpRepwb.innerHTML = "&nbsp";
             signUpVerification.innerHTML = "*请获取验证码";
-            signUpRepwbInput.style.backgroundColor = "rgba(255, 255, 255, 0)"
-            signUpPwbInput.style.backgroundColor = "rgba(255, 255, 255, 0)"
+            signUpRepwbInput.style.backgroundColor = "rgba(255, 255, 255, 0)";
+            signUpPwbInput.style.backgroundColor = "rgba(255, 255, 255, 0)";
             signUpRepwbInput.style.backgroundColor = "rgba(255, 255, 255, 0)";
             signUpVerificationInput.style.backgroundColor = "#ffdcdb";
             verification.focus();
@@ -159,19 +159,8 @@ function logUpCheck() {
             signUpPwb.innerHTML = "&nbsp";
             signUpRepwb.innerHTML = "&nbsp";
             signUpVerification.innerHTML = "*验证码错误";
-            signUpRepwbInput.style.backgroundColor = "rgba(255, 255, 255, 0)"
-            signUpPwbInput.style.backgroundColor = "rgba(255, 255, 255, 0)"
             signUpRepwbInput.style.backgroundColor = "rgba(255, 255, 255, 0)";
-            signUpVerificationInput.style.backgroundColor = "#ffdcdb";
-            verification.focus();
-            res = false;
-        } else if (verification.value != verificationCode) {
-            signUpAccount.innerHTML = "&nbsp";
-            signUpPwb.innerHTML = "&nbsp";
-            signUpRepwb.innerHTML = "&nbsp";
-            signUpVerification.innerHTML = "*验证码错误";
-            signUpRepwbInput.style.backgroundColor = "rgba(255, 255, 255, 0)"
-            signUpPwbInput.style.backgroundColor = "rgba(255, 255, 255, 0)"
+            signUpPwbInput.style.backgroundColor = "rgba(255, 255, 255, 0)";
             signUpRepwbInput.style.backgroundColor = "rgba(255, 255, 255, 0)";
             signUpVerificationInput.style.backgroundColor = "#ffdcdb";
             verification.focus();
@@ -181,8 +170,8 @@ function logUpCheck() {
             signUpPwb.innerHTML = "&nbsp";
             signUpRepwb.innerHTML = "&nbsp";
             signUpVerification.innerHTML = "&nbsp";
-            signUpRepwbInput.style.backgroundColor = "rgba(255, 255, 255, 0)"
-            signUpPwbInput.style.backgroundColor = "rgba(255, 255, 255, 0)"
+            signUpRepwbInput.style.backgroundColor = "rgba(255, 255, 255, 0)";
+            signUpPwbInput.style.backgroundColor = "rgba(255, 255, 255, 0)";
             signUpRepwbInput.style.backgroundColor = "rgba(255, 255, 255, 0)";
             signUpVerificationInput.style.backgroundColor = "rgba(255, 255, 255, 0)";
             signUpArticle.innerHTML = "*请阅读并勾选";

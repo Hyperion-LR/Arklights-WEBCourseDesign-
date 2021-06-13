@@ -9,6 +9,67 @@
     user-select: none;
 }
 
+#loading{
+    display: flex;
+    height: 1000vh;
+    width: 100vw;
+    background: url("../img/index/background.jpg") no-repeat fixed;
+    background-size: 100vw 100vh;
+    cursor: url("../img/index/cursor-inner.1d69419cb78ed4579ad9.png") 3 3, default;
+    position: relative;
+    z-index: 9;
+}
+
+#ProgressBar{
+    display: block;
+    height: 100px;
+    width: 100vw;
+    position: relative;
+    top: 50vh;
+    overflow: hidden;
+    margin-top: -50px;
+}
+
+#ProgressBarLeft{
+    float: left;
+    height: 1px;
+    width: 1vw;
+    box-shadow: 0 4px 12px -2px rgb(255 255 255 / 80%);
+    margin: 50px 0;
+    background-color: #fff;
+    transition: all 300ms;
+}
+
+#loadingLog{
+    display: inline-block;
+    height: 100px;
+    width: auto;
+    position: absolute;
+    top: 30vh;
+    left: 44vw;
+}
+
+#Progress{
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    line-height: 100px;
+    position: absolute;
+    left: 50vw;
+    padding: 4px;
+    margin-left: -12px;
+}
+
+#ProgressBarRight{
+    float: right;
+    height: 1px;
+    width: 1vw;
+    box-shadow: 0 4px 12px -2px rgb(255 255 255 / 80%);
+    margin: 50px 0;
+    background-color: #fff;
+    transition: all 300ms;
+}
+
 #mouseCircle{
     position: absolute;
     display: inline-block;
@@ -74,10 +135,51 @@ a:visited{
 }
 
 #share {
-    display: block;
+    display: inline-block;
+    height: 140px;
+    width: 150px;
     position: fixed;
-    left: 95vw;
-    top: 5vh;
+    left: 85vw;
+    top: 4vh
+}
+
+#shareImg{
+    float: right;
+    height: 30px;
+    width: 30px;
+    border-radius: 4px;
+    position: relative;
+    z-index: 3;
+}
+
+#shareMeanu{
+    display: inline-block;
+    height: 108px;
+    width: 148px;
+    overflow: hidden;
+}
+#shareUl{
+    display: inline-block;
+    height: 108px;
+    width: 148px;
+    background: url("../img/index/share.png");
+    position: relative;
+    top: -108px;
+    transition: all 600ms;
+}
+
+.shareLi{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin: 10px 16px -1px;
+}
+
+.shareTo{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 2px;
 }
 
 #navPage {
@@ -120,6 +222,15 @@ a:visited{
     position: fixed;
     left: 92vw;
     top: 90vh;
+}
+
+#nowPageNumber{
+    font: normal normal 14px "Bender";
+    color: #7f8184;
+    position: fixed;
+    left: 90vw;
+    top: 90vh;
+    transition: all 600ms;
 }
 
 /*  首页页面  */

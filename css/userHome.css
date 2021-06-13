@@ -238,6 +238,94 @@ body {
     margin-top: 2vh;
 }
 
+#SetNewPhone{
+    display: none;
+    height: 50vh;
+}
+
+#NewPhone{
+    height: 30px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 14px;
+    font-weight: normal;
+    color: #5a5a5a;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 0vh 2vh 0vh 0vh;
+}
+
+#NewPhoneVerification{
+    height: 30px;
+    width: 60%;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 14px;
+    font-weight: normal;
+    color: #5a5a5a;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 4vh 6vh 2vh -2.5vw;
+}
+
+#NewPhoneVerification:focus{
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#getNewPhoneVerification{
+    display: inline-block;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bolder;
+    height: 30px;
+    width: 27%;
+    border: none;
+    border-radius: 15px;
+    background-color: #158fc5;
+}
+
+#NowPhoneVerification{
+    height: 30px;
+    width: 60%;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 14px;
+    font-weight: normal;
+    color: #5a5a5a;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 4vh 6vh 2vh -7vw;
+}
+
+#NowPhoneVerification:focus{
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#getNowPhoneVerification{
+    display: inline-block;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bolder;
+    height: 30px;
+    width: 27%;
+    border: none;
+    border-radius: 15px;
+    background-color: #158fc5;
+}
+
+#submitNewPhone{
+    display: inline-block;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bolder;
+    height: 30px;
+    width: 24vw;
+    border: none;
+    border-radius: 15px;
+    background-color: #158fc5;
+    margin: 0vh;
+}
+
 .bigCardName{
     font-size: 16px;
     font-weight: normal;
@@ -249,10 +337,107 @@ body {
     background-size: 24px;
 }
 
+/* 绑定邮箱 */
+#SetNewEmail{
+    height: 50vh;
+    display: none;
+}
+
+#NewEmail{
+    height: 30px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 14px;
+    font-weight: normal;
+    color: #5a5a5a;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 0vh 2vh 0vh 0vh;
+}
+
+#NewEmailVerification{
+    height: 30px;
+    width: 60%;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 14px;
+    font-weight: normal;
+    color: #5a5a5a;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 4vh 6vh 2vh -4.5vw;
+}
+
+#NewEmailVerification:focus{
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#getNewEmailVerification{
+    display: inline-block;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bolder;
+    height: 30px;
+    width: 27%;
+    border: none;
+    border-radius: 15px;
+    background-color: #158fc5;
+}
+
+#NowEmailVerification{
+    height: 30px;
+    width: 60%;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 14px;
+    font-weight: normal;
+    color: #5a5a5a;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 4vh 6vh 2vh -4vw;
+}
+
+#NowEmailVerification:focus{
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#getNowEmailVerification{
+    display: inline-block;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bolder;
+    height: 30px;
+    width: 27%;
+    border: none;
+    border-radius: 15px;
+    background-color: #158fc5;
+}
+
+#submitNewEmail{
+    display: inline-block;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bolder;
+    height: 30px;
+    width: 24vw;
+    border: none;
+    border-radius: 15px;
+    background-color: #158fc5;
+    margin: 0vh;
+}
 /* 菜单 */
 /* 重置密码 */
+.ERRORInformation p {
+    font-size: 12px;
+    font-weight: normal;
+    text-align: left;
+    color: #fe1610;
+    margin-bottom: 1vh;
+}
+
 #SetNewPwb{
-    height: 50vh;
+    height: 52vh;
+    display: none;
 }
 
 #userSetNewPwb{
@@ -275,7 +460,7 @@ body {
     font-weight: normal;
     color: #5a5a5a;
     background-color: rgba(255, 255, 255, 0);
-    margin: 2vh 2vh 2vh 0vh;
+    margin: 2vh 2vh 0vh 0vh;
 }
 
 #NewPwb:focus {
@@ -332,6 +517,7 @@ body {
 /* 礼包兑换 */
 #redemption{
     height: 20vh;
+    display: none;
 }
 
 #redemptionCode{
@@ -350,9 +536,23 @@ body {
     outline: none;
 }
 
+#submitRedemption{
+    display: inline-block;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bolder;
+    height: 30px;
+    width: 24vw;
+    border: none;
+    border-radius: 15px;
+    background-color: #158fc5;
+    margin: 0vh;
+}
+
 /* 历史兑换记录 */
 #RedemptionRecords{
     height: 60vh;
+    display: none;
 }
 
 #userPedemptionInformation{
@@ -451,7 +651,7 @@ body {
     border: none;
     border-radius: 15px;
     background-color: #158fc5;
-    margin: 2vh;
+    margin: 0vh;
 }
 
 

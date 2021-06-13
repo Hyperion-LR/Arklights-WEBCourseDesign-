@@ -4,6 +4,50 @@
  * date：2021/04/27 21:56:59
  * 
  */
+
+var loading = document.getElementById("loading");
+var ProgressBarLeft = document.getElementById("ProgressBarLeft");
+var ProgressBarRight = document.getElementById("ProgressBarRight");
+var Progress = document.getElementById("Progress");
+var i = 0;
+
+setTimeout(()=>{
+    i += Math.random() * 10;
+    ProgressBarLeft.style.width = i + "vw";
+    ProgressBarRight.style.width = i + "vw";
+    Progress.innerHTML = parseInt(i * 2) + "%";
+},200);
+
+setTimeout(()=>{
+    i += Math.random() * 10;
+    ProgressBarLeft.style.width = i + "vw";
+    ProgressBarRight.style.width = i + "vw";
+    Progress.innerHTML = parseInt(i * 2) + "%";
+},400);
+
+setTimeout(()=>{
+    i += Math.random() * 10;
+    ProgressBarLeft.style.width = i + "vw";
+    ProgressBarRight.style.width = i + "vw";
+    Progress.innerHTML = parseInt(i * 2) + "%";
+},600);
+
+setTimeout(()=>{
+    i += Math.random() * 10;
+    ProgressBarLeft.style.width = i + "vw";
+    ProgressBarRight.style.width = i + "vw";
+    Progress.innerHTML = parseInt(i * 2) + "%";
+},800);
+
+setTimeout(()=>{
+    ProgressBarLeft.style.width = "50vw";
+    ProgressBarRight.style.width = "49.5vw";
+    Progress.innerHTML = "100%";
+},900);
+setTimeout(()=>{
+    loading.style.display = "none";
+},1300);
+
 informationImgListAuto();
 windowAddMouseWheel();
 var navPageLi = document.getElementsByClassName("navPageLi");
@@ -49,6 +93,7 @@ function windowAddMouseWheel() {
                     left: 0,
                     behavior: "smooth"
                 });
+                nowPageNumber.innerHTML = "0" + (nowPage + 1);
                 // console.log(nowPage);
             }
             if (e.wheelDelta > 0) {
@@ -66,6 +111,7 @@ function windowAddMouseWheel() {
                     left: 0,
                     behavior: "smooth"
                 });
+                nowPageNumber.innerHTML = "0" + (nowPage + 1);
                 // console.log(nowPage);
             }
         } else if (e.detail) { //Firefox滑轮事件
@@ -84,6 +130,7 @@ function windowAddMouseWheel() {
                     left: 0,
                     behavior: "smooth"
                 });
+                nowPageNumber.innerHTML = "0" + (nowPage + 1);
                 // console.log(nowPage);
             }
             if (e.detail < 0) { //当滑轮向下滚动时
@@ -101,6 +148,7 @@ function windowAddMouseWheel() {
                     left: 0,
                     behavior: "smooth"
                 });
+                nowPageNumber.innerHTML = "0" + (nowPage + 1);
                 // console.log(nowPage);
             }
         }
@@ -118,7 +166,22 @@ function windowAddMouseWheel() {
             left: 0,
             behavior: "smooth"
         });
+        nowPageNumber.innerHTML = "0" + (nowPage + 1);
     })
+}
+
+//分享
+var shareUl = document.getElementById("shareUl");
+var shareOpen = false;
+function shareBar(){
+    if(shareOpen){
+        shareUl.style.top = "-108px";
+        shareOpen = false;
+    }else{
+        shareUl.style.top = "0px";
+        shareOpen = true;
+    }
+
 }
 
 // 点击navPage的动画
@@ -126,6 +189,7 @@ function onclickPageList(to) {
     //console.log(to);
     borderRight(to);
     nowPage = to;
+    nowPageNumber.innerHTML = "0" + (nowPage + 1);
 }
 
 // information页面轮播图

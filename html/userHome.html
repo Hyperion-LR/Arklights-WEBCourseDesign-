@@ -23,7 +23,7 @@
             <li id="meanuLi" onclick="toPageCard(4)">自助查询</li>
         </ul>
     </span>
-    
+
     <div id="pageBody">
         <span id="nowAccount">当前账号 | 155****7290</span><br>
         <!-- 账号信息 -->
@@ -32,12 +32,12 @@
             <span class="Card">
                 <b class="CardName">绑定手机</b><br>
                 <b class="CardPhone">155****7290</b>
-                <button class="AccountInformationChange">变更</button>
+                <button class="AccountInformationChange" onclick="changePhone()">变更</button>
             </span><br>
             <span class="Card">
                 <b class="CardName">绑定邮箱</b>
                 <b class="CardEmail">Hyperion_LR@foxmail.com</b>
-                <button class="AccountInformationChange">绑定</button>
+                <button class="AccountInformationChange" onclick="changeEmail()">绑定</button>
             </span>
         </span>
         <!-- 账号角色信息 -->
@@ -60,26 +60,89 @@
                 <b class="cardRealName">未实名</b>
             </card>
         </span>
+        <!-- 手机换绑 -->
+        <span id="SetNewPhone" class="bigCard">
+            <b id="userSetNewPhone" class="bigCardName">手机换绑</b>
+            <form name="SetNewPhone" class="Card" onsubmit="return changePhoneCheck(this)" method="POST">
+                <b class="CardName">新手机号</b>
+                <input name="NewPhone" id="NewPhone" type="text">
+                <span class="ERRORInformation">
+                    <p id="PhoneError">*换绑手机号须为非注册手机号</p>
+                </span><br>
+                <b class="CardName">验证码</b>
+                <input name="NewPhoneVerification" id="NewPhoneVerification" type="text" placeholder="输入验证码">
+                <button id="getNewPhoneVerification">获取验证码</button>
+                <span class="ERRORInformation">
+                    <p id="NewPhoneVerificationError">&nbsp</p>
+                </span><br>
+                <b class="CardName">验证当前手机验证码</b>
+                <input name="NowPhoneVerification" id="NowPhoneVerification" type="text" placeholder="输入验证码">
+                <button id="getNowPhoneVerification">获取验证码</button>
+                <span class="ERRORInformation">
+                    <p id="NowPhoneVerificationError">&nbsp</p>
+                </span><br>
+                <input id="submitNewPhone" type="submit" value="确认更改">
+            </form>
+        </span>
+        <!-- 绑定邮箱 -->
+        <span id="SetNewEmail" class="bigCard">
+            <b id="userSetNewEmail" class="bigCardName">邮箱绑定</b>
+            <form name="SetNewEmail" class="Card" onsubmit="return changeEmailCheck(this)" method="POST">
+                <b class="CardName">短信验证码</b>
+                <input name="NewEmailVerification" id="NewEmailVerification" type="text" placeholder="输入短信验证码">
+                <button id="getNewEmailVerification">获取验证码</button>
+                <span class="ERRORInformation">
+                    <p id="NewEmailVerificationError">&nbsp</p>
+                </span><br> 
+
+                <b class="CardName">邮箱地址</b>
+                <input name="NewEmail" id="NewEmail" type="text">
+                <span class="ERRORInformation">
+                    <p id="EmailError">&nbsp;</p>
+                </span><br>
+
+                <b class="CardName">邮箱验证码</b>
+                <input name="NowEmailVerification" id="NowEmailVerification" type="text" placeholder="输入邮箱验证码">
+                <button id="getNowEmailVerification">获取验证码</button>
+                <span class="ERRORInformation">
+                    <p id="NowEmailVerificationError">&nbsp</p>
+                </span><br>
+
+                <input id="submitNewEmail" type="submit" value="确认绑定">
+            </form>
+        </span>
         <!-- 重置密码 -->
         <span id="SetNewPwb" class="bigCard">
             <b id="userSetNewPwb" class="bigCardName">重置密码</b>
-            <form class="Card">
+            <form name="SetNewPwb" class="Card" onsubmit="return changePwbCheck(this)" method="POST">
                 <b class="CardName">新密码</b>
-                <input id="NewPwb" type="text" placeholder="8-16位数字，字母，常用字符">
+                <input name="NewPwb" id="NewPwb" type="password" placeholder="8-16位数字，字母，常用字符">
+                <span class="ERRORInformation">
+                    <p id="PwbError">&nbsp</p>
+                </span><br>
                 <b class="CardName">确认密码</b>
-                <input id="reNewPwb" type="text" placeholder="确认密码">
+                <input name="reNewPwb" id="reNewPwb" type="password" placeholder="确认密码">
+                <span class="ERRORInformation">
+                    <p id="rePwbError">&nbsp</p>
+                </span><br>
                 <b class="CardName">验证码</b>
-                <input id="verification" type="text" placeholder="输入验证码">
+                <input name="verification" id="verification" type="text" placeholder="输入验证码">
                 <button id="getVerification">获取验证码</button>
+                <span class="ERRORInformation">
+                    <p id="verificationError">&nbsp</p>
+                </span><br>
                 <input id="submitNewPwb" type="submit" value="确认更改">
             </form>
         </span>
         <!-- 礼包兑换 -->
         <span id="redemption" class="bigCard">
             <b id="userPedemption" class="bigCardName">礼包兑换</b>
-            <form class="Card">
+            <form name="userPedemption" class="Card" onsubmit="return Redemption(this)" method="POST">
                 <input id="redemptionCode" type="text" placeholder="-A R K N I G H T-">
-                <input id="submitNewPwb" type="submit" value="确认兑换">
+                <span class="ERRORInformation">
+                    <p id="redemptionCodeError">&nbsp</p>
+                </span><br>
+                <input id="submitRedemption" type="submit" value="确认兑换">
             </form>
         </span>
         <span id="RedemptionRecords" class="bigCard">

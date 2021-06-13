@@ -44,7 +44,7 @@
             width: 100vw;
             background: url("../img/about/index.png") fixed no-repeat;
             background-size: 100%;
-            filter: blur(2px);
+            filter: blur(4px);
             position: relative;
             z-index: 1;
         }
@@ -181,6 +181,15 @@
             box-shadow: 0 2px 12px -2px rgb(9 2 4 / 80%);
         }
 
+        #aboutAvatar{
+            font-size: 18px;
+            display: none;
+        }
+
+        del{
+            font-size: 18px;
+        }
+
         #Useful {
             float: left;
             height: 140px;
@@ -313,11 +322,12 @@
 
         .notFind {
             display: none;
-            height: 300px;
+            height: 100px;
             width: 100%;
             padding: 50px;
             font-size: 48px;
-            line-height: 200px;
+            line-height: 100px;
+            margin-left: -50px;
         }
     </style>
 </head>
@@ -338,7 +348,7 @@
                     <dd class="SkillItem">数据结构，</dd>
                     <dd class="SkillItem">算法，</dd>
                     <dd class="SkillItem">C++/C，</dd>
-                    <dd class="SkillItem">Java，</dd>
+                    <dd class="SkillItem">Java，</dd><br>
                     <dd class="SkillItem">Python，</dd>
                     <dd class="SkillItem">数学建模</dd>
                     <dt id="Self" class="Item">自我总结</dt>
@@ -352,13 +362,16 @@
             <span>
                 <span id="Rubbish" onclick="openCard(1)"><b class="itemTitle">没什么用的东西</b></span>
                 <span class="outCard" onclick="returnInformation(1)">X</span>
-                <b class="notFind">内容待完善。。。</b>
+                <b class="notFind">关于本人</b>
+                <p id="aboutAvatar">
+                    这里是冰箱的主人哇！<br><br> 大二(快大三) / 死宅一个 / 成绩很拉 / <del>ACMer</del> <br> 睡觉 / 吃货<br> 原神玩家 / 瞎搞事情 / Java学习ing / <br><del>想变成大佬（；´д｀）ゞ</del>
+                </p>
             </span>
             <span>
                 <span id="Useful" onclick="openCard(2)"><b class="itemTitle">有用的网站</b></span>
                 <span class="outCard" onclick="returnInformation(2)">X</span>
-                <h1 id="UsefulTitle">冰箱主人的个人链接</h1>
-                <a class="UsefulOf" href="https://www.linuxcool.com/" target="_blank">Linux命令大全</a>
+                <h1 id="UsefulTitle">一些有用的网站</h1>
+                <a class="UsefulOf" href="https://ican1999.github.io/" target="_blank">室友的博客</a>
                 <a class="UsefulOf" href="https://paste.ubuntu.com/" target="_blank">Ubuntu&nbsp;Pastebin</a>
                 <a class="UsefulOf" href="http://www.codeinword.com/" target="_blank">CodeInWord</a>
                 <a class="UsefulOf" href="http://moretrue.cn/Home/Index/index.html" target="_blank">慕楚教育</a>
@@ -382,24 +395,7 @@
             </span>
         </span>
     </span>
-    <div id="landlord">
-        <div class="message" style="opacity:0"></div>
-        <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
-        <div class="hide-button">隐藏</div>
-    </div>
     <footer></footer>
-
-    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-    <script type="text/javascript">
-        var message_Path = 'live2d/'
-        var home_Path = 'https://haremu.com/'
-    </script>
-    <script type="text/javascript" src="live2d/js/live2d.js"></script>
-    <script type="text/javascript" src="live2d/js/message.js"></script>
-    <script type="text/javascript">
-        //调用live2d引擎，载入模型数据json
-        loadlive2d("live2d", "live2d/model/tia/model.json");
-    </script>
     <script type="text/javascript">
         var CourseDesign = document.getElementById("CourseDesign");
         var Blog = document.getElementById("Blog");
@@ -412,6 +408,7 @@
         var UsefulOf = document.getElementsByClassName("UsefulOf");
         var UsefulTitle = document.getElementById("UsefulTitle");
         var notFind = document.getElementsByClassName("notFind");
+        var aboutAvatar = document.getElementById("aboutAvatar");
 
         function openCard(index) {
             CourseDesign.style.height = "0px";
@@ -449,6 +446,7 @@
                     outCard[0].style.opacity = "1";
                     outCard[0].style.display = "inline-block";
                     notFind[0].style.display = "inline-block";
+                    aboutAvatar.style.display = "inline-block";
                 }, 600);
 
             } else if (index == 2) {
@@ -495,6 +493,7 @@
                 outCard[0].style.opacity = "0";
                 outCard[0].style.display = "none";
                 notFind[0].style.display = "none";
+                aboutAvatar.style.display = "none";
             } else if (index == 2) {
                 outCard[1].style.opacity = "0";
                 UsefulTitle.style.opacity = "0";

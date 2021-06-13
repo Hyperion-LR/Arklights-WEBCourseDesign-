@@ -8,13 +8,31 @@
 </head>
 
 <body>
+    <div id="loading">
+        <img id="loadingLog" src="./img/index/title.png">
+        <span id="ProgressBar">
+            <span id="ProgressBarLeft"></span>
+            <b id="Progress">0%</b>
+            <span id="ProgressBarRight"></span>
+        </span>
+    </div>
     <div id="mouseCircle"></div>
     <div class="login">
         <a id="buttonLogIn" href="./html/signIn.html">登录</a>
         <a id="buttonLogon" href="./html/signUp.html" target="_blank">注册</a>
     </div>
 
-    <a id="share"><img src="./img/index/search.jpg"></a>
+    <span id="share"><img id="shareImg" src="./img/index/share.jpg" onclick="shareBar()">
+        <span id="shareMeanu">
+            <ul id="shareUl">
+                <li class="shareLi"><a class="shareTo" href="" target="_blank"></a></li>
+                <li class="shareLi"><a class="shareTo" href="https://www.weibo.com/arknights?is_all=1" target="_blank"></a></li>
+                <li class="shareLi"><a class="shareTo" href="https://www.taptap.com/app/70253" target="_blank"></a></li>
+                <li class="shareLi"><a class="shareTo" href="mailto:cs@hypergryph.com" target="_blank"></a></li>
+            </ul>            
+        </span>
+
+    </span>
 
     <nav id="navPage">
         <ul>
@@ -27,7 +45,7 @@
     </nav>
 
     <span id="pageNumber">
-        <span id="nowPageNumber">00</span> / 05
+        <span id="nowPageNumber">01</span> / 05
     </span>
 
     <div id="pageList">
