@@ -166,11 +166,19 @@ function changeEmailCheck() {
             NewEmailVerification.focus();
             console.log("验证码错误");
             res = false;
-        }else if (NewEmail.value.length != 11) {
-            EmailError.innerHTML = "*请输入正确的手机号码";
+        }else if (NewEmail.value.length == 0) {
+            NewEmailVerificationError.innerHTML = "&nbsp";
+            NewEmailVerification.style.backgroundColor = "rgba(255, 255, 255, 0)";
+            EmailError.innerHTML = "*请输入邮箱";
             NewEmail.style.backgroundColor = "#ffdcdb";
             NewEmail.focus();
-            console.log("请输入正确的手机号码");
+            console.log("请输入正确的邮箱");
+            res = false;
+        } else if (NewEmail.value.indexOf('@') == -1 || NewEmail.value.indexOf('.') == -1 || NewEmail.value.indexOf('@') > NewEmail.value.lastIndexOf('.')) {
+            EmailError.innerHTML = "*邮箱格式错误";
+            NewEmail.style.backgroundColor = "#ffdcdb";
+            NewEmail.focus();
+            console.log("请输入正确的邮箱");
             res = false;
         } else if (NowEmailVerification.value.length == 0) {
             EmailError.innerHTML = "&nbsp";
