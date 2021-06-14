@@ -37,7 +37,6 @@ var ProgressBarLeft = document.getElementById("ProgressBarLeft");
 var ProgressBarRight = document.getElementById("ProgressBarRight");
 var Progress = document.getElementById("Progress");
 var i = 0;
-
 setTimeout(() => {
     i += Math.random() * 10;
     ProgressBarLeft.style.width = i + "vw";
@@ -211,6 +210,22 @@ function shareBar() {
     } else {
         shareUl.style.top = "0px";
         shareOpen = true;
+    }
+
+}
+
+//下载图片旋转
+var gameDownloadImg = document.getElementById("gameDownloadImg");
+var gameDownloadImgNow = 0;
+function gameDlownloadReturn(){
+    if(gameDownloadImgNow == 0){
+        gameDownloadImg.style.transform = "rotateY(180deg);"   /* 水平镜像翻转 */
+        gameDownloadImg.style.content = "url('../img/index/downloadImg.png')"; 
+        gameDownloadImgNow = 1;
+    }else{
+        gameDownloadImg.style.transform = "rotateY(0deg);"   /* 水平镜像翻转 */
+        gameDownloadImg.style.content = "url('../img/index/qrinner.png')";  
+        gameDownloadImgNow = 0;      
     }
 
 }

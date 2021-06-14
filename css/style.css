@@ -295,16 +295,12 @@ a:visited{
     position:absolute;
     top: 76vh;
     left: 6vw;
+    overflow: visible;
 }
 
-#gameDownload img{
+#gameDownloadImg{
     height: 110px;
-    transition: 600ms;
-}
-
-#gameDownload img:hover{
-    content:url("../img/index/downloadImg.png");
-    transform: rotateY(180deg);   /* 水平镜像翻转 */
+    transition: all 600ms;
 }
 
 #gameDownloadInfo{
@@ -316,7 +312,7 @@ a:visited{
 #gameDownload span{
     font: normal normal 12px "SansMedium";
     color: #e3e3e3;
-    padding-right: 27px;
+    padding-right: 26px;
 }
 
 #gameDownloadBy{

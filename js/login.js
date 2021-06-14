@@ -1,3 +1,7 @@
+var administrator = "2019213037";
+var administratorPassword = "123212321";
+var verificationCode = 1234;
+console.log("账号：" + administrator + "\n密码：" + administratorPassword + "\n验证码" +verificationCode);
 var signIn = document.getElementById("signIn");
 var signUp = document.getElementById("signUp");
 var signInButton = document.getElementById("signInButton");
@@ -5,8 +9,9 @@ var signUpButton = document.getElementById("signUpButton");
 var signInOfPassword = document.getElementById("signInOfPassword");
 var signInOfVerification = document.getElementById("signInOfVerification");
 var nowSignInType = 0;
-var nowType = 0;
-var verificationCode = 1234;
+var nowType = 0;    //当前是登陆还是注册卡片
+
+// 切换登陆注册卡片
 function loginTransition(type) {
     if (type == 0 && nowType == 1) {
         signIn.style.transform = "rotateY(0deg)";
@@ -61,8 +66,10 @@ var signInAccount = document.getElementById("signInAccount");
 var signInPwb = document.getElementById("signInPwb");
 var signInAccountInput = document.getElementById("signInAccountInput");
 var signInPwbInput = document.getElementById("signInPwbInput");
-var administrator = "2019213037";
-var administratorPassword = "123212321";
+var signInEmailInput = document.getElementById("signInEmailInput");
+var signIpVerification = document.getElementById("signIpVerification");
+
+
 
 function loginCheck() {
     with(document.signIn) {
@@ -78,12 +85,20 @@ function loginCheck() {
             signInAccountInput.style.backgroundColor = "#ffdcdb"
             res = false;
         } else if (pwb.value.length < 8 || pwb.value.length > 16) {
-            signInAccount.innerHTML = "&nbsp";
-            signInAccountInput.style.backgroundColor = "rgba(255, 255, 255, 0)"
-            signInPwb.innerHTML = "*密码格式错误";
-            account.focus();
-            signInPwbInput.style.backgroundColor = "#ffdcdb"
-            res = false;
+            if(verification.value.length == 0){
+                signInAccount.innerHTML = "&nbsp";
+                signInAccountInput.style.backgroundColor = "rgba(255, 255, 255, 0)"
+                signInPwb.innerHTML = "*密码格式错误";
+                account.focus();
+                signInPwbInput.style.backgroundColor = "#ffdcdb"
+                res = false;
+            }else if(verification.value != 0){
+                signInAccount.innerHTML = "&nbsp";
+                signInAccountInput.style.backgroundColor = "rgba(255, 255, 255, 0)"
+                signIpVerification.innerHTML = "*密码格式错误";
+                account.focus();
+                signInEmailInput.style.backgroundColor = "#ffdcdb"
+            }
         } else if (pwb.value != administratorPassword) {
             signInAccount.innerHTML = "&nbsp";
             signInPwb.innerHTML = "*密码错误";
